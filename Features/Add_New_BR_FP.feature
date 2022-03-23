@@ -1,6 +1,6 @@
-Feature: Add new BR QTM
+Feature: Add new BR FP
 
-  Scenario: User add new BR with service type QTM
+  Scenario: User add new BR with service type FP
     Given User is already in login page
     When User enter valid username and password
     And user click on login button
@@ -22,6 +22,8 @@ Feature: Add new BR QTM
     And click on Select as consultant button
     And User add Type of contract and Employee number
     And User click on save button
+    When User click on other information button
+    And User add total price
     When User click on Specefic contract button
     And User add Specific contract number, Date SC is received, Date SC is signed, Project start date  and Maximum end date
     When User click on work order

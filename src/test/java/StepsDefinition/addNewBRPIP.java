@@ -34,16 +34,16 @@ public class addNewBRPIP {
         Thread.sleep(1000);
 
         WebElement TxDateSCReceived = driver.getDriver().findElement(By.id("dtSCRStep5"));
-        TxDateSCReceived.sendKeys("22/03/2022");
+        TxDateSCReceived.sendKeys("23/03/2022");
         Thread.sleep(1000);
 
         WebElement TxtDateSCsigned = driver.getDriver().findElement(By.id("dtSCStep5"));
-        TxtDateSCsigned.sendKeys("22/03/2022");
+        TxtDateSCsigned.sendKeys("23/03/2022");
         Thread.sleep(1000);
 
 
         WebElement TxtMaximumEndDate = driver.getDriver().findElement(By.id("dtMaxStep5"));
-        TxtMaximumEndDate.sendKeys("20/06/2022");
+        TxtMaximumEndDate.sendKeys("23/06/2022");
         Thread.sleep(1000);
 
 
@@ -72,19 +72,19 @@ public class addNewBRPIP {
         public void user_add_sent_to_customer_date_proposal_is_submitted_to_customer_acceptance_date_date_fo_is_submitted_to_customer
         () throws InterruptedException {
             WebElement TxtSentToCustomer = driver.getDriver().findElement(By.name("YNToCustomer"));
-            TxtSentToCustomer.sendKeys("22/03/2022");
+            TxtSentToCustomer.sendKeys("23/03/2022");
             Thread.sleep(1000);
 
             WebElement TxtDateProposal = driver.getDriver().findElement(By.name("dtProposal"));
-            TxtDateProposal.sendKeys("22/03/2022");
+            TxtDateProposal.sendKeys("23/03/2022");
             Thread.sleep(1000);
 
             WebElement TxtAcceptanceDate = driver.getDriver().findElement(By.name("dtAcceptance"));
-            TxtAcceptanceDate.sendKeys("22/03/2022");
+            TxtAcceptanceDate.sendKeys("23/03/2022");
             Thread.sleep(1000);
 
             WebElement TxtDateFO = driver.getDriver().findElement(By.name("dtFO"));
-            TxtDateFO.sendKeys("22/03/2022");
+            TxtDateFO.sendKeys("06/04/2022");
             Thread.sleep(1000);
 
         }

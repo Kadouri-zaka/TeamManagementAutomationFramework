@@ -30,7 +30,7 @@ public class addNewBR {
     @And("User add a Request number, Framework contract, Department, Status, Service type,Source")
     public void user_add_a_request_number_framework_contract_department_status_service_type_source() throws InterruptedException {
         WebElement TxtRN = driver.getDriver().findElement(By.name("ReqNumber"));
-        TxtRN.sendKeys("ZakaTest22/03/22_3");
+        TxtRN.sendKeys("ZakaTest23/03/22_3");
         Thread.sleep(1000);
 
         WebElement TxtFC = driver.getDriver().findElement(By.name("typeofct"));
@@ -50,7 +50,7 @@ public class addNewBR {
 
         WebElement TxSt = driver.getDriver().findElement(By.name("typebr"));
         Select s4 = new Select(TxSt);
-        s4.selectByVisibleText("QTM");
+        s4.selectByVisibleText("FP");
         Thread.sleep(1000);
 
         WebElement TxSR = driver.getDriver().findElement(By.id("SourceBusinessRq"));
@@ -93,7 +93,7 @@ public class addNewBR {
 
     @And("User add Profile , level , on site , sales price, nbr of days other expertise")
     public void user_add_profile_level_on_site_sales_price_nbr_of_days_other_expertise() throws InterruptedException {
-        WebElement TxtProfile = driver.getDriver().findElement(By.name("Profile"));
+      /*  WebElement TxtProfile = driver.getDriver().findElement(By.name("Profile"));
         Select s8 = new Select(TxtProfile);
         s8.selectByVisibleText("AA");
         Thread.sleep(1000);
@@ -115,7 +115,7 @@ public class addNewBR {
         WebElement TxtSalesPrice = driver.getDriver().findElement(By.xpath("//input[@id='SalespriceProfile']"));
         TxtSalesPrice.clear();
         TxtSalesPrice.sendKeys("250");
-        Thread.sleep(1000);
+        Thread.sleep(1000);*/
 
         WebElement TxtOtherExpertise = driver.getDriver().findElement(By.name("Other_Expertise_required"));
         TxtOtherExpertise.sendKeys("java selenium");

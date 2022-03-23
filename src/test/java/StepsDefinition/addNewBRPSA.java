@@ -34,7 +34,7 @@ public class addNewBRPSA {
         WebElement BtnFN = driver.getDriver().findElement(By.id("CandidateFirstName"));
       //  Select p0 = new Select(BtnFN);
        // p0.selectByVisibleText("1429 Liviu Florin");
-        BtnFN.sendKeys("testx");
+        BtnFN.sendKeys("text");
         Thread.sleep(1000);
 
         WebElement BtnNC = driver.getDriver().findElement(By.name("CandidateLastName"));

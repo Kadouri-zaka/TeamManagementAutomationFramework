@@ -12,7 +12,7 @@ import static org.junit.Assert.fail;
 @CucumberOptions(
 // plugin = {"pretty","rerun:target/rerun.txt"},
 
-features = {"Features/Add_subcontractor.feature"
+features = {"Features/Add_New_BR_FP.feature"
 				
 },
 //plugin = {"pretty", "html:target/cucumber-htmlreport",
