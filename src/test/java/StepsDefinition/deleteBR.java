@@ -12,7 +12,7 @@ import javax.swing.*;
 
 public class deleteBR {
     DriverHandler driver= new DriverHandler();
-
+    String request = new String("ZakaTest25/03/22_1");
     @And("User click on Search Button")
     public void user_click_on_search_button() throws InterruptedException {
         WebElement BtnSearch = driver.getDriver().findElement(By.id("btnSearch"));
@@ -25,7 +25,7 @@ public class deleteBR {
     public void user_enter_the_request_number_in_the_filter() throws InterruptedException {
 
         WebElement TxtFilter = driver.getDriver().findElement(By.id("filter"));
-        TxtFilter.sendKeys("Zaka21/03/22_2");
+        TxtFilter.sendKeys(request);
         Thread.sleep(1000);
 
     }
@@ -33,7 +33,7 @@ public class deleteBR {
     @And("User click on the request")
     public void user_click_on_the_request() throws InterruptedException {
 
-        WebElement TxtRequest = driver.getDriver().findElement(By.xpath("//div[contains(text(),'Zaka21/03/22_2')]"));
+        WebElement TxtRequest = driver.getDriver().findElement(By.xpath("//div[contains(text(),'"+request+"')]"));
         TxtRequest.click();
         Thread.sleep(1000);
 

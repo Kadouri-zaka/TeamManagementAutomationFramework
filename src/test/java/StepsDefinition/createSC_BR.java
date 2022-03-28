@@ -44,7 +44,7 @@ public class createSC_BR {
     public void user_add_oerp_project_code() throws InterruptedException {
 
         WebElement TxtOERP = driver.getDriver().findElement(By.name("OERPProjectCode"));
-        TxtOERP.sendKeys("36987");
+        TxtOERP.sendKeys("456");
         Thread.sleep(1000);
 
     }

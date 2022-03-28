@@ -4,10 +4,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 
 public class addNewBRPIP {
     DriverHandler driver= new DriverHandler();
+    CommonHelper commonHelper = new CommonHelper();
+    String date = new String("25/03/2022");
     @And("User add total man days")
     public void user_add_total_man_days() throws InterruptedException {
         WebElement TxtTotalManDays = driver.getDriver().findElement(By.id("TOTAL_man_daysStep3"));
@@ -34,16 +37,16 @@ public class addNewBRPIP {
         Thread.sleep(1000);
 
         WebElement TxDateSCReceived = driver.getDriver().findElement(By.id("dtSCRStep5"));
-        TxDateSCReceived.sendKeys("23/03/2022");
+        TxDateSCReceived.sendKeys(date);
         Thread.sleep(1000);
 
         WebElement TxtDateSCsigned = driver.getDriver().findElement(By.id("dtSCStep5"));
-        TxtDateSCsigned.sendKeys("23/03/2022");
+        TxtDateSCsigned.sendKeys(date);
         Thread.sleep(1000);
 
 
         WebElement TxtMaximumEndDate = driver.getDriver().findElement(By.id("dtMaxStep5"));
-        TxtMaximumEndDate.sendKeys("23/06/2022");
+        TxtMaximumEndDate.sendKeys("25/06/2022");
         Thread.sleep(1000);
 
 
@@ -60,9 +63,10 @@ public class addNewBRPIP {
     }
     @And("User click on edit profile button")
     public void user_click_on_edit_profile_button() throws InterruptedException {
-        WebElement BtnEditProfile = driver.getDriver().findElement(By.id("editWorkOrder"));
+        commonHelper.waitElementToBeClickable(By.xpath("//button[@id='editWorkOrder' and @class='edit'])[0]")).click();
+       /* WebElement BtnEditProfile = driver.getDriver().findElement(By.id("editWorkOrder"));
         BtnEditProfile.click();
-        Thread.sleep(1000);
+        Thread.sleep(1000);*/
     }
 
 
@@ -72,15 +76,15 @@ public class addNewBRPIP {
         public void user_add_sent_to_customer_date_proposal_is_submitted_to_customer_acceptance_date_date_fo_is_submitted_to_customer
         () throws InterruptedException {
             WebElement TxtSentToCustomer = driver.getDriver().findElement(By.name("YNToCustomer"));
-            TxtSentToCustomer.sendKeys("23/03/2022");
+            TxtSentToCustomer.sendKeys(date);
             Thread.sleep(1000);
 
             WebElement TxtDateProposal = driver.getDriver().findElement(By.name("dtProposal"));
-            TxtDateProposal.sendKeys("23/03/2022");
+            TxtDateProposal.sendKeys(date);
             Thread.sleep(1000);
 
             WebElement TxtAcceptanceDate = driver.getDriver().findElement(By.name("dtAcceptance"));
-            TxtAcceptanceDate.sendKeys("23/03/2022");
+            TxtAcceptanceDate.sendKeys(date);
             Thread.sleep(1000);
 
             WebElement TxtDateFO = driver.getDriver().findElement(By.name("dtFO"));
