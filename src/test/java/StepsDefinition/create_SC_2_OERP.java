@@ -149,7 +149,7 @@ public class create_SC_2_OERP {
     @And("User click on edit partner button")
     public void user_click_on_edit_partner_button() {
 
-
+                ///button2
 
      commonHelper.waitElementToBeClickable(By.xpath("//button[@id='editConsultantName' and @class='edit'])[last()]")).click();
     }
