@@ -34,11 +34,11 @@ public class addNewBRPSA {
         WebElement BtnFN = driver.getDriver().findElement(By.id("CandidateFirstName"));
       //  Select p0 = new Select(BtnFN);
        // p0.selectByVisibleText("1429 Liviu Florin");
-        BtnFN.sendKeys("text");
+        BtnFN.sendKeys("axqzsdqw");
         Thread.sleep(1000);
 
         WebElement BtnNC = driver.getDriver().findElement(By.name("CandidateLastName"));
-        BtnNC.sendKeys("tetsto");
+        BtnNC.sendKeys("qyaqn");
         Thread.sleep(1000);
 
         WebElement BtnCompany = driver.getDriver().findElement(By.id("cdcompany"));
@@ -117,21 +117,21 @@ public class addNewBRPSA {
     public void user_add_type_of_contract_and_employee_number() throws InterruptedException {
 
                             //Employee
-    //    Actions actions = new Actions(driver.getDriver());
-//   WebElement btnElement = driver.getDriver().findElement(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
-    //  actions.doubleClick(btnElement).perform();
-    //    WebElement BtnSel = driver.getDriver().findElement(By.id("TOCCand"));
-    //    Select p4 = new Select(BtnSel);
-    //    p4.selectByVisibleText("Employee");
-    //    Thread.sleep(1000);
-     //   WebElement btnEN = driver.getDriver().findElement(By.id("OERPEmployeeId"));
-    //  actions.doubleClick(btnEN).perform();
-   //   WebElement BtnEnumber = driver.getDriver().findElement(By.id("OERPCand"));
-    //  BtnEnumber.sendKeys("14789");
-   //   Thread.sleep(1000);
+   /*     Actions actions = new Actions(driver.getDriver());
+ WebElement btnElement = driver.getDriver().findElement(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
+     actions.doubleClick(btnElement).perform();
+      WebElement BtnSel = driver.getDriver().findElement(By.id("TOCCand"));
+        Select p4 = new Select(BtnSel);
+        p4.selectByVisibleText("Employee");
+       Thread.sleep(1000);
+        WebElement btnEN = driver.getDriver().findElement(By.id("OERPEmployeeId"));
+     actions.doubleClick(btnEN).perform();
+      WebElement BtnEnumber = driver.getDriver().findElement(By.id("OERPCand"));
+      BtnEnumber.sendKeys("14789");
+      Thread.sleep(1000);*/
 
                             //subcontactor
-       Actions actions = new Actions(driver.getDriver());
+     /*  Actions actions = new Actions(driver.getDriver());
        WebElement btnElement = driver.getDriver().findElement(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
         actions.doubleClick(btnElement).perform();
        WebElement BtnSel = driver.getDriver().findElement(By.id("TOCCand"));
@@ -143,7 +143,17 @@ public class addNewBRPSA {
         WebElement BtnEnumber = driver.getDriver().findElement(By.id("SubmitNameSubcontractor"));
         Select p5 = new Select(BtnEnumber);
         p5.selectByVisibleText("Atos");
+        Thread.sleep(1000);*/
+
+                    //Frelance
+        Actions actions = new Actions(driver.getDriver());
+        WebElement btnElement = driver.getDriver().findElement(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
+        actions.doubleClick(btnElement).perform();
+        WebElement BtnSel = driver.getDriver().findElement(By.id("TOCCand"));
+        Select p4 = new Select(BtnSel);
+        p4.selectByVisibleText("Freelance");
         Thread.sleep(1000);
+
 
 
 
@@ -153,11 +163,12 @@ public class addNewBRPSA {
 
     }
 
-    @Then("User click on save button")
+    @And("User click on save button")
     public void user_click_on_save_button() throws InterruptedException {
-        WebElement BtnSave = driver.getDriver().findElement(By.id("SaveConsultantinfo"));
-        BtnSave.click();
+        WebElement BtnSave= driver.getDriver().findElement(By.id("SaveConsultantinfo"));
+        ((JavascriptExecutor) driver.getDriver()).executeScript("arguments[0].click();", BtnSave);
         Thread.sleep(1000);
+
 
     }
 }

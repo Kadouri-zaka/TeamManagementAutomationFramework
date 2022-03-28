@@ -16,11 +16,7 @@ public class loginPage {
 
     @Given("User is already in login page")
     public void user_launch_chrome_browser() throws InterruptedException {
-        //   System.setProperty("webdriver.chrome.driver","C:\\Users\\zkadouri\\Downloads\\chromedriver.exe");
-        //    driver = new ChromeDriver();
-        //   driver.get("https://nfr_staffaugmentation.everis.com/");
-        //  driver.manage().window().maximize();
-        //  Thread.sleep(2000);
+
         System.out.println("Welcome");
 
 
