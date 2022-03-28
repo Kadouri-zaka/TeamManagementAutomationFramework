@@ -12,7 +12,8 @@ public class CommonHelper {
 	DriverHandler driverHandler = new DriverHandler();
 
 	public void clickXpathByJs(String xpath) {
-		
+
+
 		WebElement element = driverHandler.getDriver().findElement(By.xpath(xpath));
 		((JavascriptExecutor) driverHandler.getDriver()).executeScript("arguments[0].click();", element);
 	}
