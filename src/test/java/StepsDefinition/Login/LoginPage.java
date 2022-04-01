@@ -1,16 +1,14 @@
-package StepsDefinition;
+package StepsDefinition.Login;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import test.impl.pages.DriverHandler;
 
-public class loginPage {
+public class LoginPage {
 
     DriverHandler driver = new DriverHandler();
 

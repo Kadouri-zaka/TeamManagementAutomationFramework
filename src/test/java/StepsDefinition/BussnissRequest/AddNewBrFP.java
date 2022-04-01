@@ -1,11 +1,11 @@
-package StepsDefinition;
+package StepsDefinition.BussnissRequest;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import test.impl.pages.CommonHelper;
 
-public class add_new_BR_FP {
+public class AddNewBrFP {
         CommonHelper commonHelper = new CommonHelper();
 
     @When("User click on other information button")

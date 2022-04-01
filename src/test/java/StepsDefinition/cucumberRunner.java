@@ -12,7 +12,8 @@ import static org.junit.Assert.fail;
 @CucumberOptions(
 // plugin = {"pretty","rerun:target/rerun.txt"},
 
-features = {"Features/Create_SC_2_OERP.feature"
+features = {"Features/BussnissRequest/" +
+		"CreateScFromBrWith2Oerp.feature"
 				
 },
 //plugin = {"pretty", "html:target/cucumber-htmlreport",

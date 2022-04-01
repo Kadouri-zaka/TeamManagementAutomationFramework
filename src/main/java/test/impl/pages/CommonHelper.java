@@ -3,46 +3,81 @@ package test.impl.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
 public class CommonHelper {
-	int timeOut =30;
+    int timeOut = 30;
 
-	DriverHandler driverHandler = new DriverHandler();
+    DriverHandler driverHandler = new DriverHandler();
 
-	public void clickXpathByJs(String xpath) {
-		
-		WebElement element = driverHandler.getDriver().findElement(By.xpath(xpath));
-		((JavascriptExecutor) driverHandler.getDriver()).executeScript("arguments[0].click();", element);
-	}
+    public void AddFilePath(String text) throws AWTException, InterruptedException {
+        Robot robot = new Robot();
+        StringSelection filepath = new StringSelection(text);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepath,null);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        Thread.sleep(1000);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+    }
 
-	public void clickById(String id,int timeOut) {
-		wait(timeOut);
-		WebElement element = driverHandler.getDriver().findElement(By.id(id));
-		element.click();
+    public void DoubleClick(By by){
+        WebElement webElement = null;
+        try {
+            WebDriverWait wait = new WebDriverWait(driverHandler.getDriver(), timeOut);
+            webElement = (WebElement) wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        } catch (Exception e) {
+            System.out.println(" ==> The element " + webElement + " is not Visible after " + timeOut);
+        }
+        Actions actions = new Actions(driverHandler.getDriver());
+        actions.doubleClick(webElement).perform();
+    }
 
-	}
-	
+    public void clickElementByJs(By by, int timeOut) {
+
+        WebElement element = driverHandler.getDriver().findElement(by);
+        ((JavascriptExecutor) driverHandler.getDriver()).executeScript("arguments[0].click();", by);
+        element.click();
+        wait(timeOut);
+    }
+
+    public WebElement waitElementToBeVisible(By by) {
+        WebElement webElement = null;
+        try {
+            WebDriverWait wait = new WebDriverWait(driverHandler.getDriver(), timeOut);
+            webElement = (WebElement) wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        } catch (Exception e) {
+            System.out.println(" ==> The element " + webElement + " is not Visible after " + timeOut);
+        }
+        return webElement;
+    }
 
 
-	public WebElement waitElementToBeVisible(By by) {
-		WebElement webElement = null;
-		try {
-			WebDriverWait wait = new WebDriverWait(driverHandler.getDriver(), timeOut);
-			webElement = (WebElement) wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-		} catch (Exception e) {
-			System.out.println(" ==> The element " + webElement + " is not Visible after " + timeOut);
-		}
+    public WebElement waitElementToBeClickable(By by) {
+        WebElement webElement = null;
+        try {
+            WebDriverWait wait = new WebDriverWait(driverHandler.getDriver(), timeOut);
+            webElement = (WebElement) wait.until(ExpectedConditions.elementToBeClickable(by));
+        } catch (Exception e) {
+            System.out.println(" ==> The element " + webElement + " is not Visible after " + timeOut);
+        }
+
+        return webElement;
+    }
 
 
 
-		return webElement;
-	}
 
-
-
-	public WebElement waitElementToBeClickable(By by) {
+	public void selectText(String text,By by) {
 		WebElement webElement = null;
 		try {
 			WebDriverWait wait = new WebDriverWait(driverHandler.getDriver(), timeOut);
@@ -50,21 +85,18 @@ public class CommonHelper {
 		} catch (Exception e) {
 			System.out.println(" ==> The element " + webElement + " is not Visible after " + timeOut);
 		}
-
-
-
-		return webElement;
+		Select select = new Select(webElement);
+		select.selectByVisibleText(text);
 	}
 
 
-
-	public void wait(int timeOut) {
-		try {
-			Thread.sleep(timeOut);
-		} catch (InterruptedException e) {
+    public void wait(int timeOut) {
+        try {
+            Thread.sleep(timeOut);
+        } catch (InterruptedException e) {
 // TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+            e.printStackTrace();
+        }
+    }
 
 }
