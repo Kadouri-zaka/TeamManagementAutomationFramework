@@ -2,16 +2,10 @@ package StepsDefinition.BussnissRequest;
 
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 
 import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 
 public class Documentation {
     DriverHandler driver= new DriverHandler();
@@ -33,7 +27,7 @@ public class Documentation {
 
     @And("User choose document type")
     public void user_choose_document_type() throws InterruptedException {
-        commonHelper.DoubleClick(By.xpath(documentTypeDoubleClick));
+        commonHelper.doubleClick(By.xpath(documentTypeDoubleClick));
         commonHelper.selectText(documentType,By.id("DocumentId"));
     }
 }

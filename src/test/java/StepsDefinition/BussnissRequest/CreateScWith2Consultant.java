@@ -64,7 +64,7 @@ public class CreateScWith2Consultant {
     }
     @And("User add Type of contract and Employee number for partner")
     public void user_add_type_of_contract_and_employee_number_for_partner()  {
-        commonHelper.DoubleClick(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
+        commonHelper.doubleClick(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
         commonHelper.selectText(partnerInformaton[0], By.id("TOCCand"));
       /*  commonHelper.DoubleClick(By.id("OERPEmployeeId"));
         commonHelper.waitElementToBeClickable(By.id("OERPCand")).sendKeys(partnerInformaton[1]);*/

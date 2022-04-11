@@ -16,11 +16,11 @@ public class AddNewBrPIP {
     String consultantCost = new String("150");
     @And("User add total man days")
     public void user_add_total_man_days()  {
-        commonHelper.waitElementToBeClickable(By.id("TOTAL_man_daysStep3")).sendKeys(totalManDays);
-    }
+        commonHelper.waitElementToBeClickable(By.id("TOTAL_man_daysStep3")).sendKeys(totalManDays);    }
+
     @When("User click on Specefic contract button")
     public void user_click_on_specefic_contract_button() {
-        commonHelper.waitElementToBeClickable(By.id("step5")).click();
+        commonHelper.waitElementToBeClickable(By.xpath("//a[@id='step5']")).click();
     }
         @And("User add Specific contract number, Date SC is received, Date SC is signed, Project start date  and Maximum end date")
     public void user_add_specific_contract_number_date_sc_is_received_date_sc_is_signed_project_start_date_and_maximum_end_date() throws InterruptedException {

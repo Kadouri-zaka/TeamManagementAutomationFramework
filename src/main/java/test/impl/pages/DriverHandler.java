@@ -10,7 +10,7 @@ public class DriverHandler {
 
 	public void initiatDriver() {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\zkadouri\\Downloads\\chromedriver.exe");
+				"C:\\Users\\zkadouri\\Desktop\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://nfr_staffaugmentation.everis.com/");
 		driver.manage().window().maximize();

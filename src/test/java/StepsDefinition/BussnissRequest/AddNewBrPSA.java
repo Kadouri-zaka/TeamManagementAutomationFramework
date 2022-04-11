@@ -3,17 +3,13 @@ package StepsDefinition.BussnissRequest;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 
 public class AddNewBrPSA {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String candidateInfo[]={"wxbnkj","qsgh","everis EBEL","Belen Ruiz","Recruitment","good"};
+    String candidateInfo[]={"aqqws","qsg","everis EBEL","Belen Ruiz","Recruitment","good"};
     String typeOfContract[] ={"Employee","Subcontractor","Freelance"};
     String typeOfSubcontractor = new String("Atos");
     String oerpCode = new String("9823");
@@ -56,15 +52,16 @@ public class AddNewBrPSA {
         commonHelper.selectText(typeOfContract[0],By.id("TOCCand"));
         commonHelper.DoubleClick(By.id("OERPEmployeeId"));
         commonHelper.waitElementToBeClickable(By.id("OERPCand")).sendKeys(oerpCode);*/
-                           //subcontactor
+               /*            //subcontactor
 
         commonHelper.DoubleClick(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
         commonHelper.selectText(typeOfContract[1],By.id("TOCCand"));
         commonHelper.DoubleClick(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
-        commonHelper.selectText(typeOfSubcontractor,By.id("SubmitNameSubcontractor"));
-               /*     //Frelance
-        commonHelper.DoubleClick(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
-        commonHelper.selectText(typeOfContract[2],By.id("TOCCand"));*/
+        commonHelper.selectText(typeOfSubcontractor,By.id("SubmitNameSubcontractor"));*/
+                   //Frelance
+        commonHelper.waitElementToBeVisible(By.name(""));
+        commonHelper.doubleClick(By.xpath("//div[@class='ui-grid-cell-contents ng-binding ng-scope' and contains(text(),'--Choose item--')]"));
+        commonHelper.selectText(typeOfContract[2],By.id("TOCCand"));
     }
     @And("User click on save button")
     public void user_click_on_save_button()  {

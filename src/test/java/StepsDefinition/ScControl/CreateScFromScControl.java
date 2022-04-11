@@ -11,8 +11,8 @@ public class CreateScFromScControl {
 
     CommonHelper commonHelper = new CommonHelper();
     DriverHandler driver = new DriverHandler();
-    String RequestNumber = new String("Zaka09/09/2022_PSA");
-    String OERPCode = new String("1478");
+    String requestNumber = new String("Zaka09/09/2022_PSA");
+    String oERPCode = new String("478");
 
     @When("User click on Sc Control")
     public void user_click_on_sc_control() {
@@ -29,17 +29,17 @@ public class CreateScFromScControl {
 
     @And("User add a Request number")
     public void user_add_a_request_number() {
-        commonHelper.waitElementToBeClickable(By.id("ReqNumberId")).sendKeys(RequestNumber);
+        commonHelper.waitElementToBeClickable(By.id("ReqNumberId")).sendKeys(requestNumber);
     }
 
     @And("User click on T&M control button")
     public void user_click_on_t_m_control_button() {
-        commonHelper.waitElementToBeClickable(By.id("tab2Id")).click();
+        commonHelper.waitElementToBeVisible(By.id("tab2Id")).click();
     }
 
     @And("User add OERP PROJECT CODE")
     public void user_add_oerp_project_code() {
-        commonHelper.waitElementToBeClickable(By.id("DarwinCodeId")).sendKeys(OERPCode);
+        commonHelper.waitElementToBeClickable(By.id("DarwinCodeId")).sendKeys(oERPCode);
     }
 
     @And("User click on add button for OERP Projet code")

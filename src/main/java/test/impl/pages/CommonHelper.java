@@ -13,7 +13,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 public class CommonHelper {
-    int timeOut = 30;
+    int timeOut = 40;
 
     DriverHandler driverHandler = new DriverHandler();
 
@@ -30,26 +30,32 @@ public class CommonHelper {
         robot.keyRelease(KeyEvent.VK_ENTER);
     }
 
-    public void DoubleClick(By by){
+    public void doubleClick(By by){
         WebElement webElement = null;
+        Actions actions = new Actions(driverHandler.getDriver());
         try {
             WebDriverWait wait = new WebDriverWait(driverHandler.getDriver(), timeOut);
             webElement = (WebElement) wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         } catch (Exception e) {
             System.out.println(" ==> The element " + webElement + " is not Visible after " + timeOut);
         }
-        Actions actions = new Actions(driverHandler.getDriver());
         actions.doubleClick(webElement).perform();
     }
 
     public void clickElementByJs(By by, int timeOut) {
 
         WebElement element = driverHandler.getDriver().findElement(by);
-        ((JavascriptExecutor) driverHandler.getDriver()).executeScript("arguments[0].click();", by);
-        element.click();
+        ((JavascriptExecutor) driverHandler.getDriver()).executeScript("arguments[0].click();", element);
         wait(timeOut);
     }
 
+    public void doubleClickElementByJs(By by, int timeOut) {
+
+        WebElement element = driverHandler.getDriver().findElement(by);
+        ((JavascriptExecutor) driverHandler.getDriver()).executeScript("arguments[0].click();", element);
+        ((JavascriptExecutor) driverHandler.getDriver()).executeScript("arguments[0].click();", element);
+        wait(timeOut);
+    }
     public WebElement waitElementToBeVisible(By by) {
         WebElement webElement = null;
         try {

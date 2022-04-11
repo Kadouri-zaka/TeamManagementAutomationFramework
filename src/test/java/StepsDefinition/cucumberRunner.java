@@ -12,12 +12,14 @@ import static org.junit.Assert.fail;
 @CucumberOptions(
 // plugin = {"pretty","rerun:target/rerun.txt"},
 
-features = {"Features/BussnissRequest/" +
-		"AddNewBRExtension.feature"
+features = {"Features/ScControl/" +
+		"AddDaysWorked.feature"
 				
 },
-//plugin = {"pretty", "html:target/cucumber-htmlreport",
-//"json-pretty:target/cucumber-report.json"},
+plugin = {"pretty", "html:target/cucumber-reports/cucumber.html",
+"json:target/cucumber-reports/cucumber.json",
+		"junit:target/cucumber-reports/cucumber.xml",
+"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 glue="StepsDefinition"
 )
 

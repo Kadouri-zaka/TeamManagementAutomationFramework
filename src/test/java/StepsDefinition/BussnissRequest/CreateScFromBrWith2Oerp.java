@@ -2,6 +2,8 @@ package StepsDefinition.BussnissRequest;
 
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 
@@ -19,23 +21,21 @@ public class CreateScFromBrWith2Oerp {
     }
     @And("User select OERP for each month")
     public void user_select_oerp_for_each_month() {
-        i =2;
-        commonHelper.DoubleClick(gridButton);
+       WebElement webElement= commonHelper.waitElementToBeVisible(By.xpath("(//div[@class='ui-grid-cell ng-scope ui-grid-coluiGrid-004K'])[2]/div"));
+        Actions actions = new Actions(driver.getDriver());
+        actions.doubleClick(webElement).perform();
+
+        //commonHelper.DoubleClick(By.xpath("(//div[@class='ui-grid-cell ng-scope ui-grid-coluiGrid-004K'])[2]"));
         commonHelper.selectText(oerpCode1,selectId);
-        i=3;
-        commonHelper.DoubleClick(gridButton);
+        commonHelper.doubleClick(By.xpath("(//div[@class='ui-grid-cell ng-scope ui-grid-coluiGrid-004K'])[3]/div"));
         commonHelper.selectText(oerpCode2,selectId);
-        i=4;
-        commonHelper.DoubleClick(gridButton);
+        commonHelper.doubleClick(By.xpath("(//div[@class='ui-grid-cell ng-scope ui-grid-coluiGrid-004K'])[4]/div"));
         commonHelper.selectText(oerpCode2,selectId);
-        i=6;
-        commonHelper.DoubleClick(gridButton);
+        commonHelper.doubleClick(By.xpath("(//div[@class='ui-grid-cell ng-scope ui-grid-coluiGrid-004K'])[6]/div"));
         commonHelper.selectText(oerpCode2,selectId);
-        i=7;
-        commonHelper.DoubleClick(gridButton);
+        commonHelper.doubleClick(By.xpath("(//div[@class='ui-grid-cell ng-scope ui-grid-coluiGrid-004K'])[7]/div"));
         commonHelper.selectText(oerpCode1,selectId);
-        i=8;
-        commonHelper.DoubleClick(gridButton);
+        commonHelper.doubleClick(By.xpath("(//div[@class='ui-grid-cell ng-scope ui-grid-coluiGrid-004K'])[8]/div"));
         commonHelper.selectText(oerpCode1,selectId);
     }
     @And("User click on save asign Oerp")

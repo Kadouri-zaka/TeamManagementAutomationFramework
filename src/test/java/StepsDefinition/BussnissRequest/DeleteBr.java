@@ -4,15 +4,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 
 public class DeleteBr {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String request = new String("ZakaTest01/04/22_2");
+    String request = new String("ZakaTest04/04/22_3");
 
     @And("User click on Search Button")
     public void user_click_on_search_button()  {
@@ -41,6 +39,6 @@ public class DeleteBr {
 
     @Then("BR is deleted")
     public void br_is_deleted() throws InterruptedException {
-            commonHelper.DoubleClick(By.xpath("//button[contains(text(),'OK')]"));
+            commonHelper.doubleClick(By.xpath("//button[contains(text(),'OK')]"));
     }
 }

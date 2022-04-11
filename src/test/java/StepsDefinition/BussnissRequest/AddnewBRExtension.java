@@ -34,18 +34,12 @@ public class AddnewBRExtension {
 
     @When("click on the icon of loading extension")
     public void click_on_the_icon_of_loading_extension() {
-        ((JavascriptExecutor)driver.getDriver()).executeScript(
-                "arguments[0].click();", commonHelper.waitElementToBeClickable(By.id("LoadLinkedBR")));
-
+        commonHelper.clickElementByJs(By.id("LoadLinkedBR"),2000);
     }
 
     @When("click on yes in the sweet alert appeared")
     public void click_on_yes_in_the_sweet_alert_appeared() {
-        ((JavascriptExecutor)driver.getDriver()).executeScript(
-                "arguments[0].click();",
-                commonHelper.waitElementToBeVisible(By.xpath("//*[contains(text(), 'Yes, and proceed!')]")));
-        driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+        commonHelper.waitElementToBeClickable(By.xpath("//*[contains(text(), 'Yes, and proceed!')]")).click();
     }
 
     @Then("the extension request is saved")

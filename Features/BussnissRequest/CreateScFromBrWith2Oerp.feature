@@ -10,7 +10,7 @@ Feature: Edir Nbr of days of BR FWC(PIP)
     And User enter the request number in the filter
     And User click on the request
     And User click on edit button
-    And User click on Specefic contract button
+    And User click on Specific contract button
     And User click on Create SC button
     And User add OERP project code
     And User click on add OERP button
