@@ -19,7 +19,7 @@ Feature: Add normal performance
     And User add month and days worked
     And user select consultant and OERP project code
     And user click on add month
-    And Uer click on save edit SC
+    And User click on save edit SC
     And User click on add comment button
     Then Month is added successfully
 

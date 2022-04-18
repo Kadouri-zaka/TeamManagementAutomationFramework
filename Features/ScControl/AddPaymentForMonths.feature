@@ -1,6 +1,6 @@
-Feature: Add days worked
+Feature: Add payment for months
 
-  Scenario: User add days worked for months in Sc control
+  Scenario: User add invoice for number of payment that he wants in Sc control
 
     Given User is already in login page
     When User enter valid username and password
@@ -13,8 +13,11 @@ Feature: Add days worked
     And User click on Request in grid
     And User click on edit Sc button
     When User click on performance button
-    And User add number of days worked
+    And User select month required
+    And User click on process for payment button
+    And User click on consultant payment process
+    And User add add all required field in consultant payment process pop-up
+    And User click on save consultant payment process button
     And User click on save edit SC
     And User click on add comment button
-    Then Days worked are added successfully
-
+    Then Payment is added successfully

@@ -11,14 +11,14 @@ import test.impl.pages.DriverHandler;
 public class CreateScBr {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String oerpCode = new String("2759");
+    String oerpCode = new String("22759");
     @When("User click on edit button")
     public void user_click_on_edit_button()  {
         commonHelper.waitElementToBeClickable(By.id("EditBR")).click();
     }
     @And("User click on Specific contract button")
     public void user_click_on_specific_contract_button()  {
-        commonHelper.waitElementToBeVisible(By.id("step5")).click();
+        commonHelper.clickElementByJs(By.id("step5"),2000);
     }
     @And("User click on Create SC button")
     public void user_click_on_create_sc_button()  {

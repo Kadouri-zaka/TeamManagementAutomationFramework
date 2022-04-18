@@ -27,10 +27,11 @@ public class AddNewBrProvisionOfServices {
     }
     @And("User click on edit consultant button")
     public void user_click_on_edit_consultant_button() {
-        commonHelper.waitElementToBeClickable(By.xpath("//button[@id='editConsultantName' and @class='edit'])")).click();
+        commonHelper.waitElementToBeClickable(By.xpath("//a[@id='editConsultantName']")).click();
     }
     @And("User select profile")
     public void user_select_profile()  {
+        commonHelper.waitElementToBeClickable(By.id("ProfileConsultantId"));
         commonHelper.selectText(consultantInfo[2],By.id("ProfileConsultantId"));
     }
     @And("User click on save edit consultant button")

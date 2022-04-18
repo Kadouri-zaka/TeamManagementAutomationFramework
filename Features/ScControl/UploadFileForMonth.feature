@@ -13,7 +13,7 @@ Feature: Upload file for month
     And User click on edit Sc button
     When User click on performance button
     And User click on button upload
-    And Uer click on save edit SC
+    And User click on save edit SC
     And User click on add comment button
     Then Month is added successfully
 

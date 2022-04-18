@@ -13,21 +13,26 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 public class CommonHelper {
-    int timeOut = 40;
+    int timeOut = 90;
 
     DriverHandler driverHandler = new DriverHandler();
 
-    public void AddFilePath(String text) throws AWTException, InterruptedException {
+    public void addFilePath(String text) throws AWTException, InterruptedException {
         Robot robot = new Robot();
         StringSelection filepath = new StringSelection(text);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filepath,null);
         robot.keyPress(KeyEvent.VK_CONTROL);
         Thread.sleep(1000);
         robot.keyPress(KeyEvent.VK_V);
+        Thread.sleep(1000);
         robot.keyRelease(KeyEvent.VK_V);
+        Thread.sleep(1000);
         robot.keyRelease(KeyEvent.VK_CONTROL);
+        Thread.sleep(1000);
         robot.keyPress(KeyEvent.VK_ENTER);
+        Thread.sleep(1000);
         robot.keyRelease(KeyEvent.VK_ENTER);
+        Thread.sleep(1000);
     }
 
     public void doubleClick(By by){

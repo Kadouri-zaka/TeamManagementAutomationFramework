@@ -29,8 +29,8 @@ public class AddNormalPerformance {
     public void user_click_on_add_month() {
         commonHelper.waitElementToBeClickable(By.id("IDSaveForm")).click();
     }
-    @And("Uer click on save edit SC")
-    public void uer_click_on_save_edit_sc() {
+    @And("User click on save edit SC")
+    public void user_click_on_save_edit_sc() {
         commonHelper.waitElementToBeClickable(By.id("SaveFormId")).click();
     }
     @And("User click on add comment button")

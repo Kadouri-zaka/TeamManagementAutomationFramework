@@ -9,16 +9,16 @@ Feature: Create SC with 2 Consultant
 
     When User click on Business Request field
     And User click on button New business request
-    And User add a Request number, Framework contract, Department, Status, Service type,Source
+       And User add a Request number,Framework contract,Department,Status,Service type and Source
     When User click on Basic characteristics
-    And User add Place of delivery , company
+    And User add Place of delivery and company
     And User add total man days
     When User click on New profile button
-    And User add Profile , level , on site , sales price, nbr of days other expertise
+    And User add Profile,level,on site,sales price, nbr of days and other expertise
     And User click on save of profile
-    When User click on Everis condidate
-    And User click on new condidate
-    And User add Fisrt name, Last name, Company, Recruitement, Resource type, Detail interview
+    When User click on Everis candidate
+    And User click on new candidate
+    And User add First name, Last name, Company, Recruitement, Resource type and Detail interview
     And User click on add button
     When User click on check button
     And click on Select as consultant button

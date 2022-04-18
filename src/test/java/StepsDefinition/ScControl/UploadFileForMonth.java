@@ -15,7 +15,7 @@ public class UploadFileForMonth {
     public void user_click_on_button_upload() throws InterruptedException, AWTException {
         commonHelper.waitElementToBeVisible(By.id("largeModelTMPTM"));
         commonHelper.waitElementToBeClickable(By.id("UploadID")).click();
-        commonHelper.AddFilePath(fimepath);
+        commonHelper.addFilePath(fimepath);
         Thread.sleep(5000);
     }
 }

@@ -12,8 +12,8 @@ import static org.junit.Assert.fail;
 @CucumberOptions(
 // plugin = {"pretty","rerun:target/rerun.txt"},
 
-features = {"Features/ScControl/" +
-		"AddDaysWorked.feature"
+features = {"Features/BusinessRequest/" +
+		"CreateScFromBrPIP.feature"
 				
 },
 plugin = {"pretty", "html:target/cucumber-reports/cucumber.html",

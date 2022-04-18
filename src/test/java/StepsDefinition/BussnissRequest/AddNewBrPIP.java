@@ -10,9 +10,9 @@ import test.impl.pages.DriverHandler;
 public class AddNewBrPIP {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String date = new String("01/04/2022");
+    String date = new String("18/04/2022");
     String totalManDays = new String("100");
-    String scInformation[] = {"ok",date,"30/06/2022",date};
+    String scInformation[] = {"okp",date,"30/07/2022",date};
     String consultantCost = new String("150");
     @And("User add total man days")
     public void user_add_total_man_days()  {
