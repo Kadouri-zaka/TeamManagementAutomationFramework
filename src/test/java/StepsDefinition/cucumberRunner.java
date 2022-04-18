@@ -13,7 +13,7 @@ import static org.junit.Assert.fail;
 // plugin = {"pretty","rerun:target/rerun.txt"},
 
 features = {"Features/BusinessRequest/" +
-		"CreateScFromBrPIP.feature"
+		"AddNewBRExtension.feature"
 				
 },
 plugin = {"pretty", "html:target/cucumber-reports/cucumber.html",

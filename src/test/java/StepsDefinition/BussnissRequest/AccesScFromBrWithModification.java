@@ -14,7 +14,8 @@ public class AccesScFromBrWithModification {
     DriverHandler driver= new DriverHandler();
     @And("User click on SC Control button")
     public void user_click_on_sc_control_button()  {
-        commonHelper.waitElementToBeClickable(By.id("ControlSCId")).click();
+        commonHelper.clickElementByJs(By.id("ControlSCId"),2000);
+
                     // yes and procceed
         commonHelper.waitElementToBeClickable(By.id("controlSCwithUpdateBR")).click();
                     //no and proceed

@@ -9,10 +9,10 @@ import test.impl.pages.DriverHandler;
 public class AddNewBrPSA {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String candidateInfo[]={"kadouritwq","zakariaetamp","everis EBEL","Belen Ruiz","Recruitment","good"};
+    String candidateInfo[]={"kadouritwqz","zakriaetampi","everis EBEL","Belen Ruiz","Recruitment","good"};
     String typeOfContract[] ={"Employee","Subcontractor","Freelance"};
     String typeOfSubcontractor[] = {"Atos","Projinit"};
-    String oerpCode = new String("94832");
+    String oerpCode = new String("99842");
     String checkButtonXpath = new String("(//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope' and @ng-class=\"{'ui-grid-all-selected': grid.selection.selectAll}\"])[1]");
     @When("User click on Everis candidate")
     public void user_click_on_everis_candidate() {

@@ -10,7 +10,7 @@ import test.impl.pages.DriverHandler;
 public class AddNewBROIP {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String bussnissRequestName = new String("ZakaTest18/04/22_1");
+    String bussnissRequestName = new String("ZakaTest18/04/22_3");
     String framworkContract[] ={"Axa","CASIS Lot 1"};
     String departement[]={"Axa","AGRI"};
     String statusType[]={"Order in Progress (OiP)","Pending signature Agreement (PSA)","Project in Progress (PiP)"};

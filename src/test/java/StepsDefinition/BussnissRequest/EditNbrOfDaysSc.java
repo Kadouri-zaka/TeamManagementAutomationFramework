@@ -11,7 +11,7 @@ import test.impl.pages.DriverHandler;
 public class EditNbrOfDaysSc {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String nbrOfDays = new String("120");
+    String nbrOfDays = new String("130");
 
     @And("user click on edit profile button")
     public void user_click_on_edit_profile_button() {

@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 
-public class CreateScWith2Consultant {
+public class CreateBrWith2Consultant {
 
     CommonHelper commonHelper = new CommonHelper();
     DriverHandler driver= new DriverHandler();
-    String date = new String("01/04/2022");
+    String date = new String("18/04/2022");
     String profileList[]={"Adev","Junior","On site","100","250","java selenium"};
     By levelName=By.name("Level");
     By profileName=By.name("Profile");
@@ -18,10 +18,10 @@ public class CreateScWith2Consultant {
     By nbrOfDays = By.id("ndaysprofile");
     By salesPrice = By.id("SalespriceProfile");
     By otherExpertiseRequired = By.name("Other_Expertise_required");
-    String candidateInformation[] = {"iuyup","mljhhj","Partner","Recruitment"};
-    String partnerInformaton[]={"Freelance","97491","250","    AA;Junior;On site"};
+    String candidateInformation[] = {"uyup","mljhj","Partner","Recruitment"};
+    String partnerInformaton[]={"Freelance","9491","250","    AA;Junior;On site"};
     String consultantInformation[]={"300","    Adev;Junior;On site"};
-    String oerpSeondCode = new String("167489");
+    String oerpSeondCode = new String("267489");
     String checkButtonXPath = new String("(//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope' and @ng-class=\"{'ui-grid-all-selected': grid.selection.selectAll}\"])[2]");
     @And("User add second Profile , level , on site , sales price, nbr of days other expertise")
     public void user_add_second_profile_level_on_site_sales_price_nbr_of_days_other_expertise()  {

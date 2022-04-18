@@ -22,7 +22,7 @@ public class ExportBrWithFilter {
     }
     @And("User click on Export all data with filter")
     public void user_click_on_export_all_data_with_filter() throws InterruptedException {
-        wait(10000);
+        commonHelper.waitElementToBeVisible(By.xpath("(//div[@class='ui-grid-cell-contents ng-binding ng-scope'])[1]"));
         commonHelper.waitElementToBeClickable(By.xpath("//button[@class='ui-grid-menu-item ng-binding' and contains(text(),' Export all data with filter')]")).click();
     }
 }

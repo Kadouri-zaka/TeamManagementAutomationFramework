@@ -13,7 +13,8 @@ public class AccessScFromBrWihtoutMod {
     DriverHandler driver= new DriverHandler();
     @When("User click on button SC Control")
     public void user_click_on_button_sc_control()  {
-        commonHelper.waitElementToBeClickable(By.id("ControlSCId")).click();
+        commonHelper.waitElementToBeVisible(By.id("ControlSCId"));
+        commonHelper.clickElementByJs(By.id("ControlSCId"),2000);
     }
     @And("Click on yes and proceed button")
     public void click_on_yes_and_proceed_button()  {

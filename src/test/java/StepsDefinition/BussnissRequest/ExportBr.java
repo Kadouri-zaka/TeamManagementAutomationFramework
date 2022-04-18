@@ -9,15 +9,13 @@ import test.impl.pages.DriverHandler;
 public class ExportBr {
     CommonHelper commonHelper = new CommonHelper();
     DriverHandler driver= new DriverHandler();
-
     @And("user click on Export all button")
     public void user_click_on_export_all_button() {
+        commonHelper.waitElementToBeVisible(By.xpath("(//div[@class='ui-grid-cell-contents ng-binding ng-scope'])[1]"));
         commonHelper.waitElementToBeClickable(By.id("exportexcelID")).click();
     }
-
     @Then("All BR are exported")
     public void all_br_are_exported() {
             System.out.println("All BR are exported");
     }
-
 }

@@ -10,7 +10,7 @@ import test.impl.pages.DriverHandler;
 public class DeleteBr {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String request = new String("ZakaTest15/04/22_1");
+    String request = new String("ZakaTest14/04/22_2");
 
     @And("User click on Search Button")
     public void user_click_on_search_button()  {
