@@ -12,8 +12,8 @@ import static org.junit.Assert.fail;
 @CucumberOptions(
 // plugin = {"pretty","rerun:target/rerun.txt"},
 
-features = {"Features/BusinessRequest/" +
-		"AddNewBRExtension.feature"
+features = {"Features/Login/" +
+		"AuthentificationScenarioOutline.feature"
 				
 },
 plugin = {"pretty", "html:target/cucumber-reports/cucumber.html",
