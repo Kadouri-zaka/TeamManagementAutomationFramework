@@ -11,8 +11,8 @@ public class CreateScFromBrWith2Oerp {
     int i ;
     CommonHelper commonHelper = new CommonHelper();
     DriverHandler driver= new DriverHandler();
-    String oerpCode2 = new String("369");
-    String oerpCode1 = new String("4751");
+    String oerpCode2 = new String("469");
+    String oerpCode1 = new String("4752");
     By selectId = By.id("OERPprojectCodeId");
     @And("User add first OERP project code")
     public void user_add_first_oerp_project_code() {

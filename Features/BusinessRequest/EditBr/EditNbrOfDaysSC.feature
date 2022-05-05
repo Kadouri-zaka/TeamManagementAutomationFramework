@@ -1,6 +1,6 @@
 Feature: Edir Nbr of days of BR FWC(PIP)
 
-  Scenario: User edit Nbr of days of a BR of Type FWC PIP
+  Scenario: User edit Nbr of days of a BR of Type FWC PIP with Sc
     Given User is already in login page
     When User enter valid username and password
     And user click on login button

@@ -18,7 +18,7 @@ public class AddNewBrQTM {
     public void user_choose_type_of_involement_and_field_required() {
                        //By amount
         commonHelper.selectText(typeOfInvolvementList[0],By.id("TypeInvolvementID"));
-        commonHelper.waitElementToBeClickable(By.id("TotalCostSubcoId")).sendKeys(totalConsultantCost);
+        commonHelper.waitElementToBeClickable(By.id("TotalCostSubcoIdID")).sendKeys(totalConsultantCost);
         commonHelper.selectText(typeOfCurrency,By.id("TotalCostID_Currency"));
             /*            //By number of days
        commonHelper.waitElementToBeClickable(By.id("ConsultantCostEtit")).clear();

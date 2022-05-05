@@ -9,7 +9,7 @@ import test.impl.pages.DriverHandler;
 public class DeleteScFromScControl {
     CommonHelper commonHelper = new CommonHelper();
     DriverHandler driver= new DriverHandler();
-    String requestNumber = new String("ZakaTest17/03/22_6");
+    String requestNumber = new String("ZakaTest14/04/22_2");
     @And("User click search button")
     public void user_click_search_button() {
     commonHelper.waitElementToBeClickable(By.id("searchBtn")).click();

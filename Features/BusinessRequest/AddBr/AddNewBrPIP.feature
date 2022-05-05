@@ -1,9 +1,25 @@
 Feature: add new BR PIP
   Scenario: User create new BR with FWC PIP
+
+    When User click on Business Request field
+    And User click on button New business request
+    And User add a Request number,<axa>,Department,Status,Service type and Source
+    When User click on Basic characteristics
+    And User add Place of delivery and company
+    When User click on New profile button
+    And User add <Profile>,<level>,<on site>,<sales price>, <nbr of days> and other <expertise>
+    And User click on save of profile
+    And User click on save of BR
+    Then Pop up of validation the add request is shown
+    Examples:
+      |axa| |Profile|level |on site|nbr of days |sales price|expertise     |
+      |AXA| |AA     |Junior|On site|100         |250        |java selenium |
+      |agri| |AA     |Junior|On site|100         |250        |java selenium |
+
     Given User is already in login page
     When User enter valid username and password
     And user click on login button
-    Then User connect successfully
+    Then User is redirected to the home page
     When User click on Business Request field
     And User click on button New business request
     And User add a Request number,Framework contract,Department,Status,Service type and Source

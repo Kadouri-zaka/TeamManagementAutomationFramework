@@ -1,4 +1,4 @@
-package StepsDefinition.BussnissRequest.EditBr;
+package StepsDefinition.BussnissRequest.AddBr;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
@@ -18,10 +18,10 @@ public class CreateBrWith2Consultant {
     By nbrOfDays = By.id("ndaysprofile");
     By salesPrice = By.id("SalespriceProfile");
     By otherExpertiseRequired = By.name("Other_Expertise_required");
-    String candidateInformation[] = {"uyup","mljhj","Partner","Recruitment"};
+    String candidateInformation[] = {"myup","mljhj","Partner","Recruitment"};
     String partnerInformaton[]={"Freelance","9491","250","    AA;Junior;On site"};
     String consultantInformation[]={"300","    Adev;Junior;On site"};
-    String oerpSeondCode = new String("267489");
+    String oerpSecondCode = new String("267489");
     String checkButtonXPath = new String("(//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope' and @ng-class=\"{'ui-grid-all-selected': grid.selection.selectAll}\"])[2]");
     @And("User add second Profile , level , on site , sales price, nbr of days other expertise")
     public void user_add_second_profile_level_on_site_sales_price_nbr_of_days_other_expertise()  {
@@ -102,6 +102,6 @@ public class CreateBrWith2Consultant {
     }
     @And("User add second OERP code")
     public void user_add_second_oerp_code() {
-        commonHelper.waitElementToBeClickable(By.name("OERPProjectCode")).sendKeys(oerpSeondCode);
+        commonHelper.waitElementToBeClickable(By.name("OERPProjectCode")).sendKeys(oerpSecondCode);
     }
 }

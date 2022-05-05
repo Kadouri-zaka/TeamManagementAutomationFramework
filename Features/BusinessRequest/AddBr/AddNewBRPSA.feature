@@ -4,7 +4,6 @@
       Given User is already in login page
       When User enter valid username and password
       And user click on login button
-      Then User connect successfully
       When User click on Business Request field
       And User click on button New business request
       And User add a Request number,Framework contract,Department,Status,Service type and Source
@@ -25,5 +24,5 @@
       And User click on edit button consultant
       And User add consultant cost and click on save button
       And User click on save of BR
-      Then the request is saved
+      Then Business Request with Status PSA is added
 

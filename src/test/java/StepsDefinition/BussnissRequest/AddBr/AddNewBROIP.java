@@ -3,14 +3,18 @@ package StepsDefinition.BussnissRequest.AddBr;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
+import test.impl.pages.Util;
+
+import java.util.Date;
 
 public class AddNewBROIP {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String bussnissRequestName = new String("ZakaTest19/04/22_1");
+    String bussnissRequestName = new String("BR_")+ Util.timeStamp();
     String framworkContract[] ={"Axa","CASIS Lot 1"};
     String departement[]={"Axa","AGRI"};
     String statusType[]={"Order in Progress (OiP)","Pending signature Agreement (PSA)","Project in Progress (PiP)"};
@@ -18,7 +22,7 @@ public class AddNewBROIP {
     String source[] = {"Initial"};
     String basicCharacteristicsInformation [] = {"LUX","everis EBEL"};
     String profileInformation[] = {"AA","Junior","On site","100","250","java selenium"};
-   // String profileInformationAxa[] = {"Consultant","Unique","On site","100","250","java selenium"};
+    //String profileInformationAxa[] = {"Consultant","Unique","On site","100","250","java selenium"};
     @When("User click on Business Request field")
     public void user_click_on_business_request_field()  {
         commonHelper.waitElementToBeClickable(By.id("IdBusinessRequest")).click();
@@ -66,9 +70,11 @@ public class AddNewBROIP {
     public void user_click_on_save_of_br()  {
         commonHelper.waitElementToBeClickable(By.xpath("//button[@name='SaveBusinessRequest']")).submit();
     }
-    @Then("the request is saved")
-    public void the_request_is_saved()  {
+    @Then("Pop up of validation the add request is shown")
+    public void pop_up_of_validation_the_add_request_is_shown()  {
+        String sweetAlert = commonHelper.waitElementToBeVisible(By.xpath("//div[@id='swal2-content']")).getText();
+        Assert.assertTrue( "Request is not saved because "+sweetAlert,sweetAlert.equalsIgnoreCase("Request is saved"));
         commonHelper.waitElementToBeClickable(By.xpath("//button[contains(text(),'OK')]")).click();
-        System.out.println("BR is created successfully");
+
     }
 }

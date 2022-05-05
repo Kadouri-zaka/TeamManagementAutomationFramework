@@ -5,7 +5,7 @@ Feature: Add a new Business Request
   Given User is already in login page
   When User enter valid username and password
   And user click on login button
-  Then User connect successfully
+
   When User click on Business Request field
   And User click on button New business request
   And User add a Request number,Framework contract,Department,Status,Service type and Source
@@ -15,5 +15,5 @@ Feature: Add a new Business Request
   And User add Profile,level,on site,sales price, nbr of days and other expertise
   And User click on save of profile
   And User click on save of BR
-  Then the request is saved
+  Then Pop up of validation the add request is shown
 

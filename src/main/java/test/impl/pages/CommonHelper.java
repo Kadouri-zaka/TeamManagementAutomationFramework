@@ -11,9 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 public class CommonHelper {
-    int timeOut = 90;
+    int timeOut = 40;
 
     DriverHandler driverHandler = new DriverHandler();
 
@@ -33,6 +34,12 @@ public class CommonHelper {
         Thread.sleep(1000);
         robot.keyRelease(KeyEvent.VK_ENTER);
         Thread.sleep(1000);
+    }
+
+    public  String getTitle()
+    {
+        driverHandler.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
+        return driverHandler.getDriver().getTitle();
     }
 
     public void doubleClick(By by){
