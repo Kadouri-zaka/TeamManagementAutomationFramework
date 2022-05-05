@@ -1,9 +1,7 @@
-package StepsDefinition.BussnissRequest.ExportBr;
+package StepsDefinition.BusinessRequest.ExportBr;
 
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 

@@ -1,4 +1,4 @@
-package StepsDefinition.BussnissRequest.AddBr;
+package StepsDefinition.BusinessRequest.AddBr;
 
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package StepsDefinition.BussnissRequest.DeleteBr;
+package StepsDefinition.BusinessRequest.DeleteBr;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;

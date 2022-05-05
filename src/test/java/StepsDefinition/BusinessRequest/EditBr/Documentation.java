@@ -1,4 +1,4 @@
-package StepsDefinition.BussnissRequest.EditBr;
+package StepsDefinition.BusinessRequest.EditBr;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;

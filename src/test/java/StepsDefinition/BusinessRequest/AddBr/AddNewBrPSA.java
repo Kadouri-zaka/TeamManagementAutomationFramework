@@ -1,11 +1,10 @@
-package StepsDefinition.BussnissRequest.AddBr;
+package StepsDefinition.BusinessRequest.AddBr;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 

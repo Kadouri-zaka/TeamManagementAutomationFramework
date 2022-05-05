@@ -1,11 +1,9 @@
 package StepsDefinition.BusinessRequestScenarioOutline;
-
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 import test.impl.pages.Util;
-
 public class AddBrScenarioOutline {
     DriverHandler driver = new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
@@ -23,7 +21,7 @@ public class AddBrScenarioOutline {
     By onSiteSelector = By.name("OnSite");
     By salesPriceSelector = By.id("SalespriceProfile");
     By nbrOfDaysSelector = By.id("ndaysprofile");
-     By expertiseSelector = By.name("Other_Expertise_required");
+    By expertiseSelector = By.name("Other_Expertise_required");
     @And("^User add a Request number, Framework contract as (.*),Department as (.*),Status as (.*),Service type as (.*) and Source as (.*)$")
     public void user_add_a_request_number_framework_contract_as_framework_contract_department_as_department_status_as_status_service_type_as_service_type_and_source_as_source(String frameworkContract,String departement,String status,String serviceType,String source) {
         commonHelper.waitElementToBeClickable(requestNameSelector).sendKeys(businessRequestName);

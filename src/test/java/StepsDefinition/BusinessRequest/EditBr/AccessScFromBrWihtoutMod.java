@@ -1,10 +1,8 @@
-package StepsDefinition.BussnissRequest.EditBr;
+package StepsDefinition.BusinessRequest.EditBr;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import test.impl.pages.CommonHelper;
 import test.impl.pages.DriverHandler;
 
