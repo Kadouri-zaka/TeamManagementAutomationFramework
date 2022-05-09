@@ -22,8 +22,7 @@ Feature: Add new BR FP
     And click on Select as consultant button
     And User add Type of contract and Employee number
     And User click on save button
-    When User click on other information button
-    And User add total price
+
     When User click on Specefic contract button
     And User add Specific contract number, Date SC is received, Date SC is signed, Project start date  and Maximum end date
     When User click on work order

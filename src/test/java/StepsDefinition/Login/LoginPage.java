@@ -32,11 +32,7 @@ public class LoginPage {
     public void user_click_on_login_button()  {
         commonHelper.waitElementToBeClickable(loginButtonSelector).click();
     }
-    @Then("User is redirected to the home page")
-    public void userIsRedirectedToTheHomePage() throws InterruptedException {
-        Assert.assertTrue( "User and/Or password are not correct ",commonHelper.getTitle().equalsIgnoreCase("Staff Augmentation | Index"));
 
-    }
 }
 
 

@@ -38,7 +38,7 @@ public class CommonHelper {
 
     public  String getTitle()
     {
-        driverHandler.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
+        driverHandler.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         return driverHandler.getDriver().getTitle();
     }
 

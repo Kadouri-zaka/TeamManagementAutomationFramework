@@ -13,7 +13,7 @@ import static org.junit.Assert.fail;
 // plugin = {"pretty","rerun:target/rerun.txt"},
 
 features = {"Features/BusinessRequestScenarioOutline/AddBrScenarioOutline/"
-		+"AddNewBROIPScenarioOutline.feature"
+		+"AddNewBRPSAScenarioOutline.feature"
 
 				
 },
@@ -30,13 +30,13 @@ public class cucumberRunner {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		driver.initiatDriver();
+		//driver.initiatDriver();
 
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		//driver.closeDriver();
+		driver.closeDriver();
 	}
 
 	@Before
@@ -46,7 +46,7 @@ public class cucumberRunner {
 
 	@After
 	public void tearDown() throws Exception {
-		//driver.closeDriver();
+		driver.closeDriver();
 	}
 
 	@Test

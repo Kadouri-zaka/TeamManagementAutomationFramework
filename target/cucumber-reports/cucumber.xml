@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="116.338">
+<testcase classname="Add a new BR PSA" name="User add a new BR" time="116.101">
+<system-out><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Pending signature Agreement (PSA),Service type as QTM and Source as Initial.passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as LUX and company as everis EBEL............passed
+When User click on New profile button.......................................passed
+And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as js.passed
+And User click on save of profile...........................................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as Subcontractor and its required field as Atos.passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as 150,type of involvement as By amount, required field as 1500 and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as 09/05/2022, Date proposal is submitted to customer as 09/05/2022 , Acceptance date as 09/05/2022 , Date FO is submitted to customer as 30/08/2022.passed
+And User click on save edit work order button...............................passed
+When User click on other information button.................................passed
+And User add total price as ................................................passed
+And User click on save of BR................................................passed
+Then Business Request with Status PSA is added..............................passed
+]]></system-out>
+</testcase>
+</testsuite>
