@@ -59,6 +59,8 @@ public class AddNewBRPSAScenarioOutline {
     By saveEditWordOrderSelector =By.id("SaveWOProfile");
     By totalpriceSelector =By.id("Total_PriceId");
     By otherInformationButtonSelector =By.id("step44");
+    By profileLevelConsultantButtonSelector =By.id("tab1Step3");
+    By editButtonConsultantSelector =By.id("editConsultantName");
     @And("^User add a Request number, Framework contract as (.*),Department as (.*),Status as (.*),Service type as (.*) and Source as (.*)$")
     public Data user_add_a_request_number_framework_contract_as_framework_contract_department_as_department_status_as_status_service_type_as_service_type_and_source_as_source(String frameworkContract, String departement, String status, String serviceType, String source) {
         commonHelper.waitElementToBeClickable(requestNameSelector).sendKeys(businessRequestName);
@@ -132,6 +134,14 @@ public class AddNewBRPSAScenarioOutline {
                 break;
         }
     }
+    @And("user click on Profile level consultant button")
+    public void user_click_on_Profile_level_consultant_button () {
+        commonHelper.waitElementToBeClickable(profileLevelConsultantButtonSelector).click();
+    }
+    @And("User click on edit button consultant")
+    public void user_click_on_edit_button_consultant () {
+        commonHelper.waitElementToBeClickable(editButtonConsultantSelector).click();
+    }
     @And("User click on save button")
     public void user_click_on_save_button()  {
         commonHelper.clickElementByJs(saveConsultantButtonSelector,2000);
@@ -194,7 +204,6 @@ public class AddNewBRPSAScenarioOutline {
                 commonHelper.waitElementToBeClickable(foSubmittedCustomerSelector).sendKeys(foSubmittedCustomer);
                 break;
         }
-
     }
     @And("User click on save edit work order button")
     public void user_click_on_save_edit_work_order_button ()  {
@@ -222,7 +231,6 @@ public class AddNewBRPSAScenarioOutline {
                         break;
                 }
         }
-
     }
     @Then("Business Request with Status PSA is added")
     public void business_request_with_status_psa_is_added() {
@@ -230,6 +238,5 @@ public class AddNewBRPSAScenarioOutline {
         Assert.assertTrue( "Request is not saved because "+sweetAlert,sweetAlert.equalsIgnoreCase("Request is saved"));
         commonHelper.waitElementToBeClickable(okButtonSelector).click();
     }
-
     }
 

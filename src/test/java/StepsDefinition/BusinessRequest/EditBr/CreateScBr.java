@@ -15,10 +15,7 @@ public class CreateScBr {
     public void user_click_on_edit_button()  {
         commonHelper.waitElementToBeClickable(By.id("EditBR")).click();
     }
-    @And("User click on Specific contract button")
-    public void user_click_on_specific_contract_button()  {
-        commonHelper.clickElementByJs(By.id("step5"),2000);
-    }
+
     @And("User click on Create SC button")
     public void user_click_on_create_sc_button()  {
         commonHelper.waitElementToBeClickable(By.id("CreateSC")).click();

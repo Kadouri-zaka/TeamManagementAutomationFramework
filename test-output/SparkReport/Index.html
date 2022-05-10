@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 9, 2022 03:33:57 PM</span></a>
+<a href="#"><span class="badge badge-primary">May 10, 2022 01:00:16 PM</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -66,7 +71,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -74,27 +79,27 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
-          <div class="status-avatar pass-bg">
-            <i class="fa fa-check text-white"></i>
+          <div class="status-avatar fail-bg">
+            <i class="fa fa-times text-white"></i>
           </div>
           <div class="test-detail">
             <span class="meta text-white badge badge-sm"></span>
-            <p class="name">Add a new BR PSA</p>
-            <p class="text-sm"><span>15:33:58 PM</span> / <span>116 secs</span></p>
+            <p class="name">add new BR PIP</p>
+            <p class="text-sm"><span>13:00:25 PM</span> / <span>645.629 secs</span></p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
 <div class='float-right'><span class='badge badge-default'>#test-id=1</span></div>
-<h5 class="test-status text-pass">Add a new BR PSA</h5>
-<span class='badge badge-success'>05.09.2022 15:33:58</span>
-<span class='badge badge-danger'>05.09.2022 15:35:54</span>
-<span class='badge badge-default'>116 secs</span>
+<h5 class="test-status text-fail">add new BR PIP</h5>
+<span class='badge badge-success'>05.10.2022 13:00:25</span>
+<span class='badge badge-danger'>05.10.2022 13:11:10</span>
+<span class='badge badge-default'>645.629 secs</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
 </div>
@@ -103,17 +108,17 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User add a new BR</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>User add a new BR PIP</div>
       </div>
     </div>
-        <div class="scenario_outline collapse">
+        <div class="scenario_outline ">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>User add a new BR</div>
+                  <div class="node" id="3"><span class="badge log fail-bg mr-2">Fail</span>User add a new BR PIP</div>
                 </div>
               </div>
-              <div class="card-body mt-3 collapse">
+              <div class="card-body mt-3 ">
                   <div class="step pass-bg">
                     <span>Given User is in login page</span>
       <div>
@@ -145,7 +150,7 @@
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Pending signature Agreement (PSA),Service type as QTM and Source as Initial</span>
+                    <span>And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Project in Progress (PiP),Service type as QTM and Source as Initial</span>
       <div>
       </div>
                   </div>
@@ -160,12 +165,203 @@
       </div>
                   </div>
                   <div class="step pass-bg">
+                    <span>And User add total man days as 100</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
                     <span>When User click on New profile button</span>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as js</span>
+                    <span>And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as </span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And User click on save of profile</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Other expertise is required.
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at StepsDefinition.BusinessRequestScenarioOutline.AddNewBrOIPScenarioOutline.user_click_on_save_of_profile(AddNewBrOIPScenarioOutline.java:70)
+	at ?.User click on save of profile(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/BusinessRequestScenarioOutline/AddBrScenarioOutline/AddNewBrPIPScenarioOutline.feature:16)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When User click on Everis candidate</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on new candidate</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on add button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When User click on check button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And click on Select as consultant button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add Type of contract as Subcontractor and its required field as Atos</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And user click on Profile level consultant button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on edit button consultant</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add consultant cost as 150,type of involvement as By amount, required field as 1500 and click on save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When User click on work order</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on edit profile button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add sent to customer as 10/05/2022, Date proposal is submitted to customer as 10/05/2022 , Acceptance date as 10/05/2022 , Date FO is submitted to customer as 10/05/2022</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on save edit work order button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When User click on other information button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add total price as </span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When User click on Specific contract button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add Specific contract number as ok, Date SC is received as 10/05/2022, Date SC is signed as 10/05/2022,and Maximum end date as 30/08/2022</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on save of BR</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Business Request with Status PIP is added</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="38"><span class="badge log fail-bg mr-2">Fail</span>User add a new BR PIP</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given User is in login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User enter username as Admin and password as ALKmioksfghQesNmlIompfn</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user click on the login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User is redirected to the home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Business Request field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on button New business request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add a Request number, Framework contract as Axa,Department as Axa,Status as Project in Progress (PiP),Service type as TM and Source as Initial</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Basic characteristics</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Place of delivery as LUX and company as everis EBEL</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add total man days as 100</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on New profile button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Profile as Consultant,level as Unique,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium</span>
       <div>
       </div>
                   </div>
@@ -205,7 +401,193 @@
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And User add Type of contract as Subcontractor and its required field as Atos</span>
+                    <span>And User add Type of contract as Employee and its required field as 99869</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And User click on save button</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Employee number '99869' already exists
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at StepsDefinition.BusinessRequestScenarioOutline.AddNewBRPSAScenarioOutline.user_click_on_save_button(AddNewBRPSAScenarioOutline.java:153)
+	at ?.User click on save button(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/BusinessRequestScenarioOutline/AddBrScenarioOutline/AddNewBrPIPScenarioOutline.feature:24)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And user click on Profile level consultant button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on edit button consultant</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add consultant cost as 150,type of involvement as , required field as  and click on save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When User click on work order</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on edit profile button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add sent to customer as , Date proposal is submitted to customer as  , Acceptance date as  , Date FO is submitted to customer as </span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on save edit work order button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When User click on other information button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add total price as </span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When User click on Specific contract button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User add Specific contract number as ok, Date SC is received as 10/05/2022, Date SC is signed as 10/05/2022,and Maximum end date as 30/08/2022</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And User click on save of BR</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Business Request with Status PIP is added</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="73"><span class="badge log fail-bg mr-2">Fail</span>User add a new BR PIP</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given User is in login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User enter username as Admin and password as ALKmioksfghQesNmlIompfn</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user click on the login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User is redirected to the home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Business Request field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on button New business request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Project in Progress (PiP),Service type as FP and Source as Initial</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Basic characteristics</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Place of delivery as LUX and company as everis EBEL</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add total man days as 100</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on New profile button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on save of profile</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Everis candidate</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on new candidate</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on add button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on check button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And click on Select as consultant button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Type of contract as Freelance and its required field as </span>
       <div>
       </div>
                   </div>
@@ -225,7 +607,7 @@
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And User add consultant cost as 150,type of involvement as By amount, required field as 1500 and click on save button</span>
+                    <span>And User add consultant cost as 150,type of involvement as By number of days, required field as 100 and click on save button</span>
       <div>
       </div>
                   </div>
@@ -240,7 +622,193 @@
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And User add sent to customer as 09/05/2022, Date proposal is submitted to customer as 09/05/2022 , Acceptance date as 09/05/2022 , Date FO is submitted to customer as 30/08/2022</span>
+                    <span>And User add sent to customer as 10/05/2022, Date proposal is submitted to customer as 10/05/2022 , Acceptance date as 10/05/2022 , Date FO is submitted to customer as 10/05/2022</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on save edit work order button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on other information button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add total price as 12000</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Specific contract button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Specific contract number as ok, Date SC is received as 10/05/2022, Date SC is signed as 10/05/2022,and Maximum end date as 30/08/2022</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on save of BR</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then Business Request with Status PIP is added</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Request is not saved because The sum of total cost exceeds the total price allowed to this request
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at StepsDefinition.BusinessRequestScenarioOutline.AddNewBrPIPScenarioOutline.business_request_with_status_pip_is_added(AddNewBrPIPScenarioOutline.java:39)
+	at ?.Business Request with Status PIP is added(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/BusinessRequestScenarioOutline/AddBrScenarioOutline/AddNewBrPIPScenarioOutline.feature:37)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="108"><span class="badge log pass-bg mr-2">Pass</span>User add a new BR PIP</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is in login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User enter username as Admin and password as ALKmioksfghQesNmlIompfn</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user click on the login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User is redirected to the home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Business Request field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on button New business request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Project in Progress (PiP),Service type as QTM and Source as Initial</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Basic characteristics</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Place of delivery as LUX and company as everis EBEL</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add total man days as 100</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on New profile button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on save of profile</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on Everis candidate</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on new candidate</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on add button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on check button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And click on Select as consultant button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Type of contract as Freelance and its required field as </span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on save button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user click on Profile level consultant button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on edit button consultant</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add consultant cost as 150,type of involvement as By percentage, required field as 20 and click on save button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User click on work order</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on edit profile button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add sent to customer as 10/05/2022, Date proposal is submitted to customer as 10/05/2022 , Acceptance date as 10/05/2022 , Date FO is submitted to customer as 10/05/2022</span>
       <div>
       </div>
                   </div>
@@ -260,12 +828,22 @@
       </div>
                   </div>
                   <div class="step pass-bg">
+                    <span>When User click on Specific contract button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User add Specific contract number as ok, Date SC is received as 10/05/2022, Date SC is signed as 10/05/2022,and Maximum end date as 30/08/2022</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
                     <span>And User click on save of BR</span>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>Then Business Request with Status PSA is added</span>
+                    <span>Then Business Request with Status PIP is added</span>
       <div>
       </div>
                   </div>
@@ -285,30 +863,121 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left">
+<li>
+<a href="">
+<span class="font-size-14">Exception</span>
+</a>
+</li>
+</ul>
+<ul class="tools text-right">
+<li>
+<a href="#">
+<span class="badge badge-primary">1</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="open-test">
+<div class="test-detail">
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:02:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='16'>And User click on save of profile</a>
+<div class="">
+<span class="badge badge-default">User add a new BR PIP</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:05:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='59'>And User click on save button</a>
+<div class="">
+<span class="badge badge-default">User add a new BR PIP</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:08:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='107'>Then Business Request with Status PIP is added</a>
+<div class="">
+<span class="badge badge-default">User add a new BR PIP</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul>
+<li>
+<a class="back-to-test" href="javascript:void(0)">
+<i class="fa fa-arrow-left"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 9, 2022 03:33:57 PM</h3>
+<h3>May 10, 2022 01:00:16 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 9, 2022 03:35:54 PM</h3>
+<h3>May 10, 2022 01:11:13 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -324,12 +993,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> features passed
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='100%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -347,9 +1016,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='25%'><b>1</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='75%'><b>3</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -367,10 +1036,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>31</b> steps passed</small></div>
+<div><small data-tooltip='72%'><b>99</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='2%'><b>3</b> steps failed,
+<b>34</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -383,21 +1052,21 @@
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
 passChild: 1,
-failChild: 0,
+failChild: 3,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 31,
-failGrandChild: 0,
+passGrandChild: 99,
+failGrandChild: 3,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 34,
 infoGrandChild: 0,
 eventsCount: 5,
 };
