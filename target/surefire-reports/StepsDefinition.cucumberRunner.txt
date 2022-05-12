@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: StepsDefinition.cucumberRunner
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 670.965 s - in StepsDefinition.cucumberRunner
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,767.961 s - in StepsDefinition.cucumberRunner

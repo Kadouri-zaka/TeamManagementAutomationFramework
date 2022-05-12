@@ -1,107 +1,480 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="646.312">
-<testcase classname="add new BR PIP" name="User add a new BR PIP" time="174.761">
-<failure message="Other expertise is required." type="java.lang.AssertionError"><![CDATA[Given User is in login page.................................................passed
+<testsuite errors="0" failures="8" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="1,705.061">
+<testcase classname="add new BR" name="User add a new BR" time="137.015">
+<system-out><![CDATA[Given User is in login page.................................................passed
 When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
 And user click on the login button..........................................passed
 Then User is redirected to the home page....................................passed
 When User click on Business Request field...................................passed
 And User click on button New business request...............................passed
-And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Project in Progress (PiP),Service type as QTM and Source as Initial.passed
+And User add a Request number, Framework contract as Axa,Department as Axa,Status as Order in Progress (OiP),Service type as TM and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
 When User click on Basic characteristics....................................passed
 And User add Place of delivery as LUX and company as everis EBEL............passed
-And User add total man days as 100..........................................passed
-When User click on New profile button.......................................passed
-And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as .passed
-And User click on save of profile...........................................failed
-When User click on Everis candidate.........................................skipped
-And User click on new candidate.............................................skipped
-And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.skipped
-And User click on add button................................................skipped
-When User click on check button.............................................skipped
-And click on Select as consultant button....................................skipped
-And User add Type of contract as Subcontractor and its required field as Atos.skipped
-And User click on save button...............................................skipped
-And user click on Profile level consultant button...........................skipped
-And User click on edit button consultant....................................skipped
-And User add consultant cost as 150,type of involvement as By amount, required field as 1500 and click on save button.skipped
-When User click on work order...............................................skipped
-And User click on edit profile button.......................................skipped
-And User add sent to customer as 10/05/2022, Date proposal is submitted to customer as 10/05/2022 , Acceptance date as 10/05/2022 , Date FO is submitted to customer as 10/05/2022.skipped
-And User click on save edit work order button...............................skipped
-When User click on other information button.................................skipped
-And User add total price as ................................................skipped
-When User click on Specific contract button.................................skipped
-And User add Specific contract number as ok, Date SC is received as 10/05/2022, Date SC is signed as 10/05/2022,and Maximum end date as 30/08/2022.skipped
-And User click on save of BR................................................skipped
-Then Business Request with Status PIP is added..............................skipped
-
-StackTrace:
-java.lang.AssertionError: Other expertise is required.
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at StepsDefinition.BusinessRequestScenarioOutline.AddNewBrOIPScenarioOutline.user_click_on_save_of_profile(AddNewBrOIPScenarioOutline.java:70)
-	at ✽.User click on save of profile(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/BusinessRequestScenarioOutline/AddBrScenarioOutline/AddNewBrPIPScenarioOutline.feature:16)
-]]></failure>
-</testcase>
-<testcase classname="add new BR PIP" name="User add a new BR PIP 2" time="175.195">
-<failure message="Employee number '99869' already exists" type="java.lang.AssertionError"><![CDATA[Given User is in login page.................................................passed
-When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
-And user click on the login button..........................................passed
-Then User is redirected to the home page....................................passed
-When User click on Business Request field...................................passed
-And User click on button New business request...............................passed
-And User add a Request number, Framework contract as Axa,Department as Axa,Status as Project in Progress (PiP),Service type as TM and Source as Initial.passed
-When User click on Basic characteristics....................................passed
-And User add Place of delivery as LUX and company as everis EBEL............passed
-And User add total man days as 100..........................................passed
+And User add total man days as .............................................passed
 When User click on New profile button.......................................passed
 And User add Profile as Consultant,level as Unique,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium.passed
 And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as , Last name as , Company as everis EBEL, Recruitement as , Resource type as  and Detail interview as .passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as  and its required field as ................passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as ,type of involvement as , required field as  and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as , Date proposal is submitted to customer as  , Acceptance date as  , Date FO is submitted to customer as .passed
+And User click on save edit work order button...............................passed
+When User click on Specific contract button.................................passed
+And User add Specific contract number as , Date SC is received as , Date SC is signed as ,and Maximum end date as .passed
+And User click on save of BR................................................passed
+Then Business Request  is added.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 2" time="129.664">
+<system-out><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as Axa,Department as Axa,Status as Pending signature Agreement (PSA),Service type as TM and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as LUX and company as everis EBEL............passed
+And User add total man days as .............................................passed
+When User click on New profile button.......................................passed
+And User add Profile as Consultant,level as Unique,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium.passed
+And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
 When User click on Everis candidate.........................................passed
 And User click on new candidate.............................................passed
 And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.passed
 And User click on add button................................................passed
 When User click on check button.............................................passed
 And click on Select as consultant button....................................passed
-And User add Type of contract as Employee and its required field as 99869...passed
-And User click on save button...............................................failed
-And user click on Profile level consultant button...........................skipped
-And User click on edit button consultant....................................skipped
-And User add consultant cost as 150,type of involvement as , required field as  and click on save button.skipped
-When User click on work order...............................................skipped
-And User click on edit profile button.......................................skipped
-And User add sent to customer as , Date proposal is submitted to customer as  , Acceptance date as  , Date FO is submitted to customer as .skipped
-And User click on save edit work order button...............................skipped
-When User click on other information button.................................skipped
-And User add total price as ................................................skipped
-When User click on Specific contract button.................................skipped
-And User add Specific contract number as ok, Date SC is received as 10/05/2022, Date SC is signed as 10/05/2022,and Maximum end date as 30/08/2022.skipped
-And User click on save of BR................................................skipped
-Then Business Request with Status PIP is added..............................skipped
-
-StackTrace:
-java.lang.AssertionError: Employee number '99869' already exists
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at StepsDefinition.BusinessRequestScenarioOutline.AddNewBRPSAScenarioOutline.user_click_on_save_button(AddNewBRPSAScenarioOutline.java:153)
-	at ✽.User click on save button(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/BusinessRequestScenarioOutline/AddBrScenarioOutline/AddNewBrPIPScenarioOutline.feature:24)
-]]></failure>
+And User add Type of contract as Employee and its required field as 99871...passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as 150,type of involvement as , required field as  and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as , Date proposal is submitted to customer as  , Acceptance date as  , Date FO is submitted to customer as .passed
+And User click on save edit work order button...............................passed
+When User click on Specific contract button.................................passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
+And User click on save of BR................................................passed
+Then Business Request  is added.............................................passed
+]]></system-out>
 </testcase>
-<testcase classname="add new BR PIP" name="User add a new BR PIP 3" time="145.039">
-<failure message="Request is not saved because The sum of total cost exceeds the total price allowed to this request" type="java.lang.AssertionError"><![CDATA[Given User is in login page.................................................passed
+<testcase classname="add new BR" name="User add a new BR 3" time="181.79">
+<system-out><![CDATA[Given User is in login page.................................................passed
 When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
 And user click on the login button..........................................passed
 Then User is redirected to the home page....................................passed
 When User click on Business Request field...................................passed
 And User click on button New business request...............................passed
-And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Project in Progress (PiP),Service type as FP and Source as Initial.passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Pending signature Agreement (PSA),Service type as Provision of services and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as LUX and company as everis EBEL............passed
+And User add total man days as .............................................passed
+When User click on New profile button.......................................passed
+And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as .passed
+And User click on save of profile...........................................passed
+And user add new consultant first name Xavier and last name Folquet.........passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as , Last name as , Company as everis EBEL, Recruitement as , Resource type as  and Detail interview as .passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as  and its required field as ................passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as ,type of involvement as , required field as  and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as , Date proposal is submitted to customer as  , Acceptance date as  , Date FO is submitted to customer as .passed
+And User click on save edit work order button...............................passed
+When User click on Specific contract button.................................passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
+And User click on save of BR................................................passed
+Then Business Request  is added.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 4" time="132.48">
+<failure message="Request is not saved because Yes/No sent to customer date should not be less than RF received date" type="java.lang.AssertionError"><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Pending signature Agreement (PSA),Service type as QTM and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as LUX and company as everis EBEL............passed
+And User add total man days as .............................................passed
+When User click on New profile button.......................................passed
+And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as js.passed
+And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as Subcontractor and its required field as Atos.passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as 150,type of involvement as By amount, required field as 1500 and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as 11/05/2022, Date proposal is submitted to customer as 11/05/2022 , Acceptance date as 11/05/2022 , Date FO is submitted to customer as 30/08/2022.passed
+And User click on save edit work order button...............................passed
+When User click on Specific contract button.................................passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
+And User click on save of BR................................................passed
+Then Business Request  is added.............................................failed
+
+StackTrace:
+java.lang.AssertionError: Request is not saved because Yes/No sent to customer date should not be less than RF received date
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at StepsDefinition.AddBusinessRequestScenarioOutline.business_request__is_added(AddBusinessRequestScenarioOutline.java:885)
+	at ✽.Business Request  is added(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/AddBusinessRequestScenarioOutline.feature:38)
+]]></failure>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 5" time="123.685">
+<failure message="Request is not saved because Yes/No sent to customer date should not be less than RF received date" type="java.lang.AssertionError"><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Pending signature Agreement (PSA),Service type as QTM and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as LUX and company as everis EBEL............passed
+And User add total man days as .............................................passed
+When User click on New profile button.......................................passed
+And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium.passed
+And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as Freelance and its required field as .......passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as 150,type of involvement as By number of days, required field as 100 and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as 11/05/2022, Date proposal is submitted to customer as 11/05/2022 , Acceptance date as 11/05/2022 , Date FO is submitted to customer as 30/08/2022.passed
+And User click on save edit work order button...............................passed
+When User click on Specific contract button.................................passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
+And User click on save of BR................................................passed
+Then Business Request  is added.............................................failed
+
+StackTrace:
+java.lang.AssertionError: Request is not saved because Yes/No sent to customer date should not be less than RF received date
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at StepsDefinition.AddBusinessRequestScenarioOutline.business_request__is_added(AddBusinessRequestScenarioOutline.java:885)
+	at ✽.Business Request  is added(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/AddBusinessRequestScenarioOutline.feature:38)
+]]></failure>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 6" time="132.523">
+<failure message="Request is not saved because Yes/No sent to customer date should not be less than RF received date" type="java.lang.AssertionError"><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Pending signature Agreement (PSA),Service type as FP and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as 50000...........................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as LUX and company as everis EBEL............passed
+And User add total man days as .............................................passed
+When User click on New profile button.......................................passed
+And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium.passed
+And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as Freelance and its required field as .......passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as 150,type of involvement as By percentage, required field as 20 and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as 11/05/2022, Date proposal is submitted to customer as 11/05/2022 , Acceptance date as 11/05/2022 , Date FO is submitted to customer as 30/08/2022.passed
+And User click on save edit work order button...............................passed
+When User click on Specific contract button.................................passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
+And User click on save of BR................................................passed
+Then Business Request  is added.............................................failed
+
+StackTrace:
+java.lang.AssertionError: Request is not saved because Yes/No sent to customer date should not be less than RF received date
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at StepsDefinition.AddBusinessRequestScenarioOutline.business_request__is_added(AddBusinessRequestScenarioOutline.java:885)
+	at ✽.Business Request  is added(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/AddBusinessRequestScenarioOutline.feature:38)
+]]></failure>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 7" time="59.156">
+<system-out><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Pending signature Agreement (PSA),Service type as TM and Source as Extension and linked BR as Nahid20042022_02.passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as  and company as ..........................passed
+And User add total man days as .............................................passed
+When User click on New profile button.......................................passed
+And User add Profile as ,level as ,on site as ,sales price as , nbr of days as  and other expertise as .passed
+And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as , Last name as , Company as , Recruitement as , Resource type as  and Detail interview as .passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as  and its required field as ................passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as ,type of involvement as , required field as  and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as , Date proposal is submitted to customer as  , Acceptance date as  , Date FO is submitted to customer as .passed
+And User click on save edit work order button...............................passed
+When User click on Specific contract button.................................passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
+And User click on save of BR................................................passed
+Then Business Request  is added.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 8" time="73.804">
+<system-out><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Pending signature Agreement (PSA),Service type as FP and Source as Extension and linked BR as zaka23/3/2022.passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as  and company as ..........................passed
+And User add total man days as .............................................passed
+When User click on New profile button.......................................passed
+And User add Profile as ,level as ,on site as ,sales price as , nbr of days as 250 and other expertise as .passed
+And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as , Last name as , Company as , Recruitement as , Resource type as  and Detail interview as .passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as  and its required field as ................passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as 100,type of involvement as By number of days, required field as 100 and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as , Date proposal is submitted to customer as  , Acceptance date as  , Date FO is submitted to customer as .passed
+And User click on save edit work order button...............................passed
+When User click on Specific contract button.................................passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
+And User click on save of BR................................................passed
+Then Business Request  is added.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 9" time="71.822">
+<failure message="Request is not saved because Please fill in all the required fields and resubmit the form" type="java.lang.AssertionError"><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Pending signature Agreement (PSA),Service type as QTM and Source as Extension and linked BR as BR_2022-05-09.15.34.35.516+01:00.passed
+When User click on offer information button.................................passed
+And User add total price as 12000...........................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as  and company as ..........................passed
+And User add total man days as .............................................passed
+When User click on New profile button.......................................passed
+And User add Profile as ,level as ,on site as ,sales price as 100, nbr of days as  and other expertise as .passed
+And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as , Last name as , Company as , Recruitement as , Resource type as  and Detail interview as .passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as  and its required field as ................passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as 100,type of involvement as By number of days, required field as 100 and click on save button.passed
+When User click on work order...............................................passed
+And User click on edit profile button.......................................passed
+And User add sent to customer as , Date proposal is submitted to customer as  , Acceptance date as  , Date FO is submitted to customer as .passed
+And User click on save edit work order button...............................passed
+When User click on Specific contract button.................................passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
+And User click on save of BR................................................passed
+Then Business Request  is added.............................................failed
+
+StackTrace:
+java.lang.AssertionError: Request is not saved because Please fill in all the required fields and resubmit the form
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at StepsDefinition.AddBusinessRequestScenarioOutline.business_request__is_added(AddBusinessRequestScenarioOutline.java:885)
+	at ✽.Business Request  is added(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/AddBusinessRequestScenarioOutline.feature:38)
+]]></failure>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 10" time="205.567">
+<failure message="" type="java.lang.NullPointerException"><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Project in Progress (PiP),Service type as TM and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as LUX and company as everis EBEL............passed
+And User add total man days as 100..........................................passed
+When User click on New profile button.......................................passed
+And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as js.passed
+And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as Subcontractor and its required field as Atos.passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................passed
+And User add consultant cost as 150,type of involvement as By amount, required field as 1500 and click on save button.failed
+When User click on work order...............................................skipped
+And User click on edit profile button.......................................skipped
+And User add sent to customer as 10/05/2022, Date proposal is submitted to customer as 10/05/2022 , Acceptance date as 10/05/2022 , Date FO is submitted to customer as 10/05/2022.skipped
+And User click on save edit work order button...............................skipped
+When User click on Specific contract button.................................skipped
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.skipped
+And User click on save of BR................................................skipped
+Then Business Request  is added.............................................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.Select.<init>(Select.java:46)
+	at test.impl.pages.CommonHelper.selectText(CommonHelper.java:106)
+	at StepsDefinition.AddBusinessRequestScenarioOutline.user_add_consultant_cost_as_consultant_cost_type_of_involvement_as_type_involvement_required_field_as_required_field_involvement_and_click_on_save_button(AddBusinessRequestScenarioOutline.java:708)
+	at ✽.User add consultant cost as 150,type of involvement as By amount, required field as 1500 and click on save button(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/AddBusinessRequestScenarioOutline.feature:30)
+]]></failure>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 11" time="164.19">
+<failure message="" type="java.lang.NullPointerException"><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as Axa,Department as Axa,Status as Project in Progress (PiP),Service type as Provision of services and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
+When User click on Basic characteristics....................................passed
+And User add Place of delivery as LUX and company as everis EBEL............passed
+And User add total man days as 100..........................................passed
+When User click on New profile button.......................................passed
+And User add Profile as Consultant,level as Unique,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium.passed
+And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
+When User click on Everis candidate.........................................passed
+And User click on new candidate.............................................passed
+And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.passed
+And User click on add button................................................passed
+When User click on check button.............................................passed
+And click on Select as consultant button....................................passed
+And User add Type of contract as Employee and its required field as 99872...passed
+And User click on save button...............................................passed
+And user click on Profile level consultant button...........................passed
+And User click on edit button consultant....................................failed
+And User add consultant cost as 150,type of involvement as , required field as  and click on save button.skipped
+When User click on work order...............................................skipped
+And User click on edit profile button.......................................skipped
+And User add sent to customer as , Date proposal is submitted to customer as  , Acceptance date as  , Date FO is submitted to customer as .skipped
+And User click on save edit work order button...............................skipped
+When User click on Specific contract button.................................skipped
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.skipped
+And User click on save of BR................................................skipped
+Then Business Request  is added.............................................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at StepsDefinition.AddBusinessRequestScenarioOutline.user_click_on_edit_button_consultant(AddBusinessRequestScenarioOutline.java:639)
+	at ✽.User click on edit button consultant(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/AddBusinessRequestScenarioOutline.feature:29)
+]]></failure>
+</testcase>
+<testcase classname="add new BR" name="User add a new BR 12" time="147.782">
+<failure message="Request is not saved because Yes/No sent to customer date should not be less than RF received date" type="java.lang.AssertionError"><![CDATA[Given User is in login page.................................................passed
+When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
+And user click on the login button..........................................passed
+Then User is redirected to the home page....................................passed
+When User click on Business Request field...................................passed
+And User click on button New business request...............................passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Project in Progress (PiP),Service type as FP and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as 500000..........................................passed
 When User click on Basic characteristics....................................passed
 And User add Place of delivery as LUX and company as everis EBEL............passed
 And User add total man days as 100..........................................passed
 When User click on New profile button.......................................passed
 And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium.passed
 And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
 When User click on Everis candidate.........................................passed
 And User click on new candidate.............................................passed
 And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.passed
@@ -117,35 +490,36 @@ When User click on work order...............................................pass
 And User click on edit profile button.......................................passed
 And User add sent to customer as 10/05/2022, Date proposal is submitted to customer as 10/05/2022 , Acceptance date as 10/05/2022 , Date FO is submitted to customer as 10/05/2022.passed
 And User click on save edit work order button...............................passed
-When User click on other information button.................................passed
-And User add total price as 12000...........................................passed
 When User click on Specific contract button.................................passed
-And User add Specific contract number as ok, Date SC is received as 10/05/2022, Date SC is signed as 10/05/2022,and Maximum end date as 30/08/2022.passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
 And User click on save of BR................................................passed
-Then Business Request with Status PIP is added..............................failed
+Then Business Request  is added.............................................failed
 
 StackTrace:
-java.lang.AssertionError: Request is not saved because The sum of total cost exceeds the total price allowed to this request
+java.lang.AssertionError: Request is not saved because Yes/No sent to customer date should not be less than RF received date
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.assertTrue(Assert.java:42)
-	at StepsDefinition.BusinessRequestScenarioOutline.AddNewBrPIPScenarioOutline.business_request_with_status_pip_is_added(AddNewBrPIPScenarioOutline.java:39)
-	at ✽.Business Request with Status PIP is added(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/BusinessRequestScenarioOutline/AddBrScenarioOutline/AddNewBrPIPScenarioOutline.feature:37)
+	at StepsDefinition.AddBusinessRequestScenarioOutline.business_request__is_added(AddBusinessRequestScenarioOutline.java:885)
+	at ✽.Business Request  is added(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/AddBusinessRequestScenarioOutline.feature:38)
 ]]></failure>
 </testcase>
-<testcase classname="add new BR PIP" name="User add a new BR PIP 4" time="150.543">
-<system-out><![CDATA[Given User is in login page.................................................passed
+<testcase classname="add new BR" name="User add a new BR 13" time="143.476">
+<failure message="Request is not saved because Yes/No sent to customer date should not be less than RF received date" type="java.lang.AssertionError"><![CDATA[Given User is in login page.................................................passed
 When User enter username as Admin and password as ALKmioksfghQesNmlIompfn...passed
 And user click on the login button..........................................passed
 Then User is redirected to the home page....................................passed
 When User click on Business Request field...................................passed
 And User click on button New business request...............................passed
-And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Project in Progress (PiP),Service type as QTM and Source as Initial.passed
+And User add a Request number, Framework contract as CASIS Lot 1,Department as AGRI,Status as Project in Progress (PiP),Service type as QTM and Source as Initial and linked BR as .passed
+When User click on offer information button.................................passed
+And User add total price as ................................................passed
 When User click on Basic characteristics....................................passed
 And User add Place of delivery as LUX and company as everis EBEL............passed
 And User add total man days as 100..........................................passed
 When User click on New profile button.......................................passed
 And User add Profile as AA,level as Junior,on site as On site,sales price as 100, nbr of days as 250 and other expertise as java selenium.passed
 And User click on save of profile...........................................passed
+And user add new consultant first name  and last name ......................passed
 When User click on Everis candidate.........................................passed
 And User click on new candidate.............................................passed
 And User add First name as test, Last name as test, Company as everis EBEL, Recruitement as Belen Ruiz, Resource type as Recruitment and Detail interview as good.passed
@@ -161,12 +535,17 @@ When User click on work order...............................................pass
 And User click on edit profile button.......................................passed
 And User add sent to customer as 10/05/2022, Date proposal is submitted to customer as 10/05/2022 , Acceptance date as 10/05/2022 , Date FO is submitted to customer as 10/05/2022.passed
 And User click on save edit work order button...............................passed
-When User click on other information button.................................passed
-And User add total price as ................................................passed
 When User click on Specific contract button.................................passed
-And User add Specific contract number as ok, Date SC is received as 10/05/2022, Date SC is signed as 10/05/2022,and Maximum end date as 30/08/2022.passed
+And User add Specific contract number as ok, Date SC is received as 12/05/2022, Date SC is signed as 12/05/2022,and Maximum end date as 30/08/2022.passed
 And User click on save of BR................................................passed
-Then Business Request with Status PIP is added..............................passed
-]]></system-out>
+Then Business Request  is added.............................................failed
+
+StackTrace:
+java.lang.AssertionError: Request is not saved because Yes/No sent to customer date should not be less than RF received date
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at StepsDefinition.AddBusinessRequestScenarioOutline.business_request__is_added(AddBusinessRequestScenarioOutline.java:885)
+	at ✽.Business Request  is added(file:///C:/Users/zkadouri/IdeaProjects/test0/Features/AddBusinessRequestScenarioOutline.feature:38)
+]]></failure>
 </testcase>
 </testsuite>

@@ -5,6 +5,7 @@ StepsDefinition\ScControl\AddNormalPerformance.class
 StepsDefinition\BusinessRequest\ExportBr\ExportBr.class
 StepsDefinition\BusinessRequest\EditBr\AccessScFromBrWihtoutMod.class
 StepsDefinition\ScControl\AddInvoiceForMonths.class
+StepsDefinition\AddBusinessRequestScenarioOutline.class
 StepsDefinition\BusinessRequest\AddBr\AddNewBrProvisionOfServices.class
 StepsDefinition\BusinessRequest\AddBr\CreateBrWith2Consultant.class
 StepsDefinition\BusinessRequest\EditBr\CreateScFromBrPIP.class

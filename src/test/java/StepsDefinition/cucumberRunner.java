@@ -12,8 +12,8 @@ import static org.junit.Assert.fail;
 @CucumberOptions(
 // plugin = {"pretty","rerun:target/rerun.txt"},
 
-features = {"Features/BusinessRequestScenarioOutline/AddBrScenarioOutline/"
-		+"AddNewBrPIPScenarioOutline.feature"
+features = {"Features/AddBusinessRequestScenarioOutline.feature"
+
 
 				
 },
