@@ -7,7 +7,7 @@ Feature: add new BR PIP
     Then User is redirected to the home page
     When User click on Business Request field
     And User click on button New business request
-    And User add a Request number, Framework contract as <Framework contract>,Department as <Department>,Status as <Status>,Service type as <Service type> and Source as <Source>
+    And User add a Request number, Framework contract as <Framework contract>,Department as <Department>,Status as <Status>,Service type as <Service type> and Source as <Source> and linked BR as <linked BR>
     When User click on Basic characteristics
     And User add Place of delivery as <Place of delivery> and company as <company>
     And User add total man days as <total man days>
@@ -34,7 +34,7 @@ Feature: add new BR PIP
     When User click on Specific contract button
     And User add Specific contract number as <contract number>, Date SC is received as <sc received date>, Date SC is signed as <sc is signed>,and Maximum end date as <end date>
     And User click on save of BR
-    Then Business Request with Status PIP is added
+    Then Business Request  is added
 
     Examples:
       | username |  | password                |  | Framework contract |  | Department |  | Status                    |  | Service type          |  | Source  |  | Place of delivery |  | company     |  | total man days |  | Profile    |  | level  |  | on site |  | sales price |  | nbr of days |  | expertise     |  | first name |  | last name |  | company     |  | recuitement |  | resource type |  | detail interview |  | type of contract |  | required field |  | consultant cost |  | type involvement  |  | required field involvement |  | sent to customer |  | submitted to customer |  | acceptance date |  | FO submitted to customer |  | total price |  | contract number |  | sc received date |  | sc is signed |  | end date   |

@@ -1,6 +1,6 @@
 Feature: add new BR
 
-  Scenario Outline: User add a new BR
+  Scenario Outline: User add a new BR - OIP
     Given User is in login page
     When User enter username as <username> and password as <password>
     And user click on the login button

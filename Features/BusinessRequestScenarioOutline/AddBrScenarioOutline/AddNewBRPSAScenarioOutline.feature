@@ -32,7 +32,7 @@ Feature: Add a new BR PSA
     And User add sent to customer as <sent to customer>, Date proposal is submitted to customer as <submitted to customer> , Acceptance date as <acceptance date> , Date FO is submitted to customer as <FO submitted to customer>
     And User click on save edit work order button
     And User click on save of BR
-    Then Business Request with Status PSA is added
+    Then Business Request  is added
 
 
     Examples:
