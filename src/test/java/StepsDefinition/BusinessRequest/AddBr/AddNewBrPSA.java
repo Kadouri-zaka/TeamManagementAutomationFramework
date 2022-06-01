@@ -11,9 +11,9 @@ import test.impl.pages.DriverHandler;
 public class AddNewBrPSA {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String candidateInfo[]={"ertyulpmw","uytyuwwq","everis EBEL","Belen Ruiz","Recruitment","good"};
+    String candidateInfo[]={"ertyulpmw","uytyuwwq","EBEL","Ruiz","Recruitment","good"};
     String typeOfContract[] ={"Employee","Subcontractor","Freelance"};
-    String typeOfSubcontractor[] = {"Atos","Projinit"};
+    String typeOfSubcontractor[] = {"Ats","Proinit"};
     String oerpCode = "99856";
 
 
