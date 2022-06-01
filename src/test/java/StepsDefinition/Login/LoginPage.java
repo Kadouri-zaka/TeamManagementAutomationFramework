@@ -15,7 +15,7 @@ public class LoginPage {
     DriverHandler driver = new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
     String username = new String("Admin");
-    String password = new String("ALKmioksfghQesNmlIompfn");
+    String password = new String("ALKmioks");
     By usernameSelector =By.id("username");
     By passwordSelector =By.id("password");
     By loginButtonSelector =By.xpath("//button[@id='loginButton']");
