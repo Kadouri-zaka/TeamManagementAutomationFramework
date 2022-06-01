@@ -10,9 +10,9 @@ public class DriverHandler {
 
 	public void initiatDriver() {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\zkadouri\\Desktop\\chromedriver1.exe");
+				"C:\\Users\\zkad\\Desktop\\chromedriver1.exe");
 		driver = new ChromeDriver();
-		driver.get("https://nfr_staffbaugmentation.everis.com/");
+		driver.get("http://localhost:8081/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	}
