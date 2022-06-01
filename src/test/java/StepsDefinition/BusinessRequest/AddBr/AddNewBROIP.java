@@ -13,12 +13,12 @@ public class AddNewBROIP {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
     String bussnissRequestName = new String("BR_")+ Util.timeStamp();
-    String framworkContract[] ={"Axa","CASIS Lot 1"};
-    String departement[]={"Axa","AGRI"};
+    String framworkContract[] ={"Axxa","CAxSIS Lot 1"};
+    String departement[]={"Axxa","AGRI"};
     String statusType[]={"Order in Progress (OiP)","Pending signature Agreement (PSA)","Project in Progress (PiP)"};
     String serviceType[]={"TM","FP","Provision of services","QTM","PTM"};
     String source[] = {"Initial"};
-    String basicCharacteristicsInformation [] = {"LUX","everis EBEL"};
+    String basicCharacteristicsInformation [] = {"LUX","EBEL"};
     String profileInformation[] = {"AA","Junior","On site","100","250","java selenium"};
     //String profileInformationAxa[] = {"Consultant","Unique","On site","100","250","java selenium"};
 
