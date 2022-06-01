@@ -9,7 +9,7 @@ import test.impl.pages.DriverHandler;
 public class AddNewBrProvisionOfServices {
     CommonHelper commonHelper = new CommonHelper();
     DriverHandler driver= new DriverHandler();
-    String consultantInfo[] ={"Xavier","Folquet","    AA;Junior;On site"};
+    String consultantInfo[] ={"Xavier","Folq","    AA;Junior;On site"};
     @When("User click on new consultant button")
     public void user_click_on_new_consultant_button() {
        commonHelper.waitElementToBeClickable(By.id("AddNewConsultantId")).click();
