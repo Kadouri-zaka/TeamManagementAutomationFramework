@@ -9,7 +9,7 @@ import test.impl.pages.DriverHandler;
 public class AddnewBRExtension {
     DriverHandler driver= new DriverHandler();
     CommonHelper commonHelper = new CommonHelper();
-    String bussnissRequestInformaation[] = {"NahidTest_Extension_3","CASIS Lot 1","Project in Progress (PiP)","TM","Extension"};
+    String bussnissRequestInformaation[] = {"Test_Extension_3","CAS Lot 1","Project in Progress (PiP)","TM","Extension"};
     String linkedBrName = new String("ZakaTest17/03/22");
     @And("User add a Request number, Framework contract,Service type")
     public void user_add_a_request_number_framework_contract_service_type_source() {
