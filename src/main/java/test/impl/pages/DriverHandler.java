@@ -12,7 +12,7 @@ public class DriverHandler {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\zkadouri\\Desktop\\chromedriver1.exe");
 		driver = new ChromeDriver();
-		driver.get("https://nfr_staffaugmentation.everis.com/");
+		driver.get("https://nfr_staffbaugmentation.everis.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	}
